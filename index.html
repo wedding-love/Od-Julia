@@ -49,6 +49,79 @@
             color: #1a1a1a;
         }
 
+        /* ----- LANGUAGE SELECTOR (МОДАЛЬНОЕ ОКНО) ----- */
+        #langModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+            padding: 20px;
+        }
+        #langModal.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        #langModal .lang-title {
+            font-family: 'Lighthaus', 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: clamp(28px, 5vw, 42px);
+            letter-spacing: 4px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+        #langModal .lang-sub {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: #777;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        .lang-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .lang-btn {
+            font-family: 'Lighthaus', 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 3px;
+            padding: 16px 50px;
+            border: 1px solid #1a1a1a;
+            background: transparent;
+            color: #1a1a1a;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            min-width: 140px;
+        }
+        .lang-btn:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        .lang-btn.ru:hover {
+            background: #1a3a6a;
+            border-color: #1a3a6a;
+            color: #fff;
+        }
+        .lang-btn.en:hover {
+            background: #6a1a2a;
+            border-color: #6a1a2a;
+            color: #fff;
+        }
+
         @font-face {
             font-family: 'Lighthaus';
             src: url('Lighthaus.otf') format('opentype');
@@ -81,7 +154,7 @@
             background-color: #ffffff;
         }
 
-        /* ----- FIRST SCREEN (АДАПТИВНЫЙ) ----- */
+        /* ----- FIRST SCREEN (АДАПТИВНЫЙ, УВЕЛИЧЕННЫЙ) ----- */
         .first-screen {
             position: relative;
             width: 100%;
@@ -91,29 +164,31 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 30px 16px 45px;
+            padding: 20px 16px 45px;
             background-color: #ffffff;
             text-align: center;
         }
 
         .first-screen .title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(28px, 6vw, 42px);
-            letter-spacing: 4px;
+            font-family: 'Lighthaus', 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: clamp(36px, 8vw, 56px);
+            letter-spacing: 6px;
             color: #1a1a1a;
             margin-bottom: 6px;
         }
 
         .first-screen .date {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(14px, 2.5vw, 18px);
-            font-style: italic;
+            font-family: 'Lighthaus', 'Quicksand', sans-serif;
+            font-weight: 300;
+            font-size: clamp(16px, 3vw, 22px);
+            letter-spacing: 2px;
             color: #555;
             margin-bottom: 16px;
         }
 
         .first-screen .photo {
-            width: min(68%, 380px);
+            width: min(72%, 420px);
             margin: 0 auto 16px;
             border-radius: 14px;
             overflow: hidden;
@@ -124,15 +199,18 @@
         }
 
         .first-screen .names h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(24px, 4.5vw, 34px);
+            font-family: 'Lighthaus', 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: clamp(30px, 5.5vw, 42px);
             color: #1a1a1a;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
         .first-screen .names span {
-            font-family: 'Great Vibes', cursive;
-            font-size: clamp(20px, 3.5vw, 28px);
+            font-family: 'Lighthaus', 'Quicksand', sans-serif;
+            font-weight: 300;
+            font-size: clamp(22px, 4vw, 32px);
             color: #555;
+            letter-spacing: 2px;
         }
 
         .first-screen .scroll-down {
@@ -180,15 +258,15 @@
         }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-        .second-screen { width: 100%; background: #fff; padding: 60px 20px; }
+        .second-screen { width: 100%; background: #fff; padding: 40px 20px; }
         .invitation-container { text-align: center; max-width: 400px; margin: 0 auto; }
         .title { font-family: 'Lighthaus', 'Quicksand', sans-serif; font-weight: 400; font-size: clamp(2rem, 4.5vw, 2.5rem); letter-spacing: 2px; line-height: 1.2; color: #1a1a1a; margin-bottom: 20px; }
         .save-the-date { font-family: 'Pinyon Script', cursive; font-size: clamp(2rem, 4.5vw, 2.4rem); color: #1a1a1a; margin-bottom: 25px; }
         .description-text { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; line-height: 1.5; color: #555; font-weight: 300; letter-spacing: 0.5px; max-width: 320px; margin: 0 auto 35px; }
 
-        .line { width: 1px; background: #1a1a1a; height: 60px; margin: 0 auto; opacity: 0; transform: scaleY(0); transition: opacity 3s cubic-bezier(0.2,0.9,0.3,1.1), transform 3s cubic-bezier(0.2,0.9,0.3,1.1); }
-        .line-top { margin-bottom: 30px; transform-origin: top; }
-        .line-bottom { margin-top: 30px; margin-bottom: 50px; transform-origin: bottom; }
+        .line { width: 1px; background: #1a1a1a; height: 50px; margin: 0 auto; opacity: 0; transform: scaleY(0); transition: opacity 3s cubic-bezier(0.2,0.9,0.3,1.1), transform 3s cubic-bezier(0.2,0.9,0.3,1.1); }
+        .line-top { margin-bottom: 25px; transform-origin: top; }
+        .line-bottom { margin-top: 25px; margin-bottom: 40px; transform-origin: bottom; }
         .line.visible { opacity: 0.6; transform: scaleY(1); }
 
         .date-block { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 5px; }
@@ -209,12 +287,12 @@
         .heart-svg { position: absolute; width: 48px; height: 48px; top: 50%; left: 50%; transform: translate(-50%, -52%); pointer-events: none; }
         .heart-path { stroke: #1a1a1a; stroke-width: 1.2; fill: none; }
 
-        /* ----- LOCATION SECTION (ФОТО ОРИГИНАЛ, БЕЗ ЗАСВЕТЛЕНИЯ) ----- */
+        /* ----- LOCATION SECTION ----- */
         .location-section {
             position: relative;
             max-width: 450px;
             margin: 0 auto;
-            padding: 50px 25px;
+            padding: 40px 25px;
             background: #fff;
         }
         .location-bg {
@@ -237,7 +315,7 @@
             position: relative;
             z-index: 2;
             background: rgba(255, 255, 255, 0.98);
-            padding: 40px 25px;
+            padding: 35px 25px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border-radius: 4px;
@@ -251,36 +329,47 @@
         .btn-maps { display: inline-block; background: #1a1a1a; color: #fff; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.6rem; font-weight: 400; letter-spacing: 1.5px; padding: 10px 20px; text-transform: uppercase; cursor: pointer; transition: background 0.2s; border: none; }
         .btn-maps:hover { background: #333; }
 
-        .timeline-screen { background: #fff; padding: 50px 20px 60px; }
+        .timeline-screen { background: #fff; padding: 40px 20px 50px; }
         .timeline-container { max-width: 400px; margin: 0 auto; text-align: center; }
         .timeline-main-title { font-family: 'Lighthaus', 'Quicksand', sans-serif; font-weight: 400; font-size: clamp(1.8rem,4.5vw,2.2rem); text-transform: uppercase; letter-spacing: 6px; }
         .timeline-subtitle { font-family: 'Pinyon Script', cursive; font-size: clamp(1.3rem,3.5vw,1.6rem); margin-bottom: 25px; }
-        .timeline-middle-line { width: 1px; background: #b5b5b5; margin: 0 auto 30px; height: 50px; }
-        .timeline-list { margin: 35px 0; }
-        .timeline-item { margin: 30px 0; opacity: 0; transform: translateX(-40px); transition: opacity 1.8s, transform 1.8s; }
+        .timeline-middle-line { width: 1px; background: #b5b5b5; margin: 0 auto 30px; height: 40px; }
+        .timeline-list { margin: 30px 0; }
+        .timeline-item { margin: 25px 0; opacity: 0; transform: translateX(-40px); transition: opacity 1.8s, transform 1.8s; }
         .timeline-item.slide-right { transform: translateX(40px); }
         .timeline-item.visible { opacity: 1; transform: translateX(0); }
         .timeline-item .time { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; }
         .timeline-item .timeline-desc { font-family: 'Montserrat', sans-serif; font-size: 14px; color: #333; max-width: 300px; margin: 0 auto; }
 
-        .dresscode-screen { background: #fff; padding: 40px 16px 60px; }
+        .dresscode-screen { background: #fff; padding: 40px 16px 50px; }
         .dresscode-container { width: 100%; max-width: 450px; margin: 0 auto; text-align: center; position: relative; }
         .dresscode-main-title { font-family: 'Lighthaus', 'Quicksand', sans-serif; font-weight: 400; font-size: 42px; text-transform: uppercase; letter-spacing: 3px; line-height: 1.2; color: #121212; margin-bottom: 24px; opacity: 0; transform: translateY(40px); transition: opacity 2.5s cubic-bezier(0.25, 0.8, 0.4, 1), transform 2.5s cubic-bezier(0.25, 0.8, 0.4, 1); }
         .dresscode-description { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 300; line-height: 1.7; color: #555555; max-width: 340px; margin: 0 auto 30px auto; opacity: 0; transform: translateY(40px); transition: opacity 2.5s cubic-bezier(0.25, 0.8, 0.4, 1), transform 2.5s cubic-bezier(0.25, 0.8, 0.4, 1); }
         .dresscode-main-title.visible, .dresscode-description.visible { opacity: 1; transform: translate(0); }
 
-        .countdown-screen { background: #000000; padding: 75px 16px 85px; }
+        /* ----- COUNTDOWN (СНИЗУ ВВЕРХ) ----- */
+        .countdown-screen { background: #000000; padding: 60px 16px 70px; }
         .countdown-dark-block { max-width: 450px; margin: 0 auto; text-align: center; }
         .countdown-title { font-family: 'Lighthaus', 'Quicksand', sans-serif; font-weight: 400; font-size: 38px; text-transform: uppercase; letter-spacing: 4px; color: #fff; max-width: 340px; margin: 0 auto 12px; }
         .countdown-subtitle { font-family: 'Pinyon Script', cursive; font-size: 34px; color: #fff; margin-bottom: 40px; }
-        .countdown-divider { width: 1px; height: 80px; background: rgba(255,255,255,0.25); margin: 0 auto 55px; }
+        .countdown-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.25); margin: 0 auto 45px; }
         .timer-grid { display: flex; justify-content: center; max-width: 360px; margin: 0 auto; }
         .timer-item { flex: 1; text-align: center; }
         .timer-number { font-family: 'Cormorant Garamond', serif; font-size: 46px; font-weight: 300; color: #fff; margin-bottom: 14px; }
         .timer-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; }
 
-        /* ----- CONCEPT / WISHES SECTION (with slider) ----- */
-        .wishes-screen { background: #ffffff; padding: 60px 20px 80px; }
+        .countdown-animate {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 2s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 2s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+        }
+        .countdown-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ----- CONCEPT / WISHES SECTION ----- */
+        .wishes-screen { background: #ffffff; padding: 50px 20px 70px; }
         .wishes-container { max-width: 450px; margin: 0 auto; text-align: center; }
         .anim-slide-up, .anim-fade-in, .anim-slide-left, .anim-slide-right { opacity: 0; transition: opacity 2.5s cubic-bezier(0.25, 0.8, 0.4, 1), transform 2.5s cubic-bezier(0.25, 0.8, 0.4, 1); }
         .anim-slide-up { transform: translateY(40px); }
@@ -300,16 +389,16 @@
         .arrow-right { right: -5px; }
         .slider-arrow svg { width: 24px; height: 16px; fill: none; stroke: #121212; stroke-width: 1px; }
 
-        .wishes-vertical-divider { width: 1px; height: 90px; background-color: #b5b5b5; margin: 0 auto 45px auto; }
-        .pre-closing { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 300; line-height: 1.6; color: #121212; margin-bottom: 45px; }
-        .wishes-names-block { display: flex; flex-direction: column; align-items: center; margin-bottom: 55px; }
+        .wishes-vertical-divider { width: 1px; height: 70px; background-color: #b5b5b5; margin: 0 auto 35px auto; }
+        .pre-closing { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 300; line-height: 1.6; color: #121212; margin-bottom: 35px; }
+        .wishes-names-block { display: flex; flex-direction: column; align-items: center; margin-bottom: 45px; }
         .name-item { font-family: 'Lighthaus', 'Quicksand', sans-serif; font-weight: 300; font-size: 46px; text-transform: uppercase; letter-spacing: 5px; line-height: 1.1; color: #121212; }
         .ampersand-item { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 38px; font-weight: 400; color: #121212; margin: 12px 0; }
 
-        .rsvp-screen { background: #fff; padding: 60px 20px; }
-        .rsvp-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px 30px; text-align: left; }
+        .rsvp-screen { background: #fff; padding: 40px 20px 60px; }
+        .rsvp-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px 30px; text-align: left; }
         .rsvp-title { font-family: 'Lighthaus', 'Quicksand', sans-serif; font-size: 32px; text-transform: uppercase; letter-spacing: 3px; color: #1a1a1a; text-align: center; margin-bottom: 20px; }
-        .rsvp-deadline { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 300; color: #777; text-align: center; margin-bottom: 35px; font-style: italic; }
+        .rsvp-deadline { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 300; color: #777; text-align: center; margin-bottom: 30px; font-style: italic; }
         .rsvp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 30px; align-items: start; }
         .rsvp-grid .full-width { grid-column: 1 / -1; }
         .form-group { margin-bottom: 0; }
@@ -322,8 +411,7 @@
         .checkbox-group { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
         .checkbox-group label { display: flex; align-items: center; gap: 10px; font-weight: 400; text-transform: none; font-size: 14px; margin-bottom: 0; cursor: pointer; padding: 3px 0; width: 100%; }
         .checkbox-group input[type="checkbox"] { width: 17px; height: 17px; margin: 0; accent-color: #1a1a1a; cursor: pointer; flex-shrink: 0; }
-        .other-song-input { margin-top: 6px; display: none; }
-        .other-song-input.active { display: block; }
+        .other-song-input { margin-top: 6px; display: block; }
         .other-song-input input { width: 100%; padding: 8px 0; border: none; border-bottom: 1px solid #ddd; font-family: 'Montserrat', sans-serif; font-size: 14px; background: transparent; outline: none; color: #1a1a1a; }
         .other-song-input input:focus { border-bottom-color: #1a1a1a; }
         .drinks-hint { font-family: 'Montserrat', sans-serif; font-size: 11px; color: #888; margin-top: 6px; font-style: italic; }
@@ -333,18 +421,18 @@
         .success-message.show { display: block; }
         @media (max-width: 600px) { .rsvp-grid { grid-template-columns: 1fr; gap: 20px; } .rsvp-container { padding: 30px 20px; } }
 
-        .contacts-screen { background: #fff; padding: 60px 20px 80px; }
+        .contacts-screen { background: #fff; padding: 40px 20px 60px; }
         .contacts-container { max-width: 450px; margin: 0 auto; text-align: center; }
         .contacts-title { font-family: 'Lighthaus', 'Quicksand', sans-serif; font-size: 32px; text-transform: uppercase; letter-spacing: 3px; color: #1a1a1a; margin-bottom: 15px; }
         .contacts-subtitle { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 300; letter-spacing: 1px; color: #777; margin-bottom: 20px; }
-        .contacts-list { display: flex; flex-direction: column; gap: 28px; margin-bottom: 45px; }
+        .contacts-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 35px; }
         .contact-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
         .contact-role { font-family: 'Montserrat', sans-serif; font-weight: 500; color: #1a1a1a; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; }
         .contact-line { font-family: 'Montserrat', sans-serif; font-size: 14px; }
         .contact-line a { color: #333; text-decoration: none; }
         .contact-line a:hover { color: #6B705C; }
         .contact-sub { font-family: 'Montserrat', sans-serif; font-size: 11px; color: #999; letter-spacing: 0.5px; }
-        .contacts-divider { width: 1px; height: 50px; background: #d0d0d0; margin: 0 auto 35px; }
+        .contacts-divider { width: 1px; height: 40px; background: #d0d0d0; margin: 0 auto 30px; }
         .contacts-copyright { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 1.5px; color: #aaa; text-transform: uppercase; }
 
         .rsvp-animate, .contacts-animate { opacity: 0; transform: translateY(40px); transition: opacity 2s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 2s cubic-bezier(0.2, 0.9, 0.3, 1.1); }
@@ -356,6 +444,16 @@
 </head>
 <body>
 
+<!-- LANGUAGE SELECTOR MODAL -->
+<div id="langModal">
+    <div class="lang-title">Choose your language</div>
+    <div class="lang-sub">Пожалуйста, выберите язык</div>
+    <div class="lang-buttons">
+        <button class="lang-btn en" data-lang="en">English</button>
+        <button class="lang-btn ru" data-lang="ru">Русский</button>
+    </div>
+</div>
+
 <!-- PRELOADER -->
 <div id="preloader">
     <div class="loader-track">
@@ -366,31 +464,34 @@
 
 <!-- FIRST SCREEN -->
 <div class="first-screen" id="firstScreen">
-    <div class="title">WEDDING</div>
-    <div class="date">14 August 2026</div>
+    <div class="title" data-en="WEDDING" data-ru="СВАДЬБА">WEDDING</div>
+    <div class="date" data-en="14 August 2026" data-ru="14 августа 2026">14 August 2026</div>
     <div class="photo"><img src="главная.PNG" alt="Od & Julia"></div>
     <div class="names">
         <h2>Od &amp; Julia</h2>
         <span>Jacobsen</span>
     </div>
-    <div class="scroll-down" id="scrollBtn">Scroll down<svg class="arrow-icon-svg" viewBox="0 0 10 10"><polyline points="1,3 5,7 9,3" style="fill:none; stroke:white; stroke-width:1.2;"/></svg></div>
+    <div class="scroll-down" id="scrollBtn">
+        <span data-en="Scroll down" data-ru="Листайте вниз">Scroll down</span>
+        <svg class="arrow-icon-svg" viewBox="0 0 10 10"><polyline points="1,3 5,7 9,3" style="fill:none; stroke:white; stroke-width:1.2;"/></svg>
+    </div>
 </div>
 
 <!-- SECOND SCREEN -->
 <div class="second-screen" id="secondScreen">
     <div class="invitation-container">
-        <h1 class="title fade-up">DEAR<br>FRIENDS!</h1>
-        <div class="save-the-date fade-up">Save the date!</div>
-        <p class="description-text fade-up">This is our official wedding invitation! We would love to have you by our side on this special day.</p>
+        <h1 class="title fade-up" data-en="DEAR<br>FRIENDS!" data-ru="ДОРОГИЕ<br>ДРУЗЬЯ!">DEAR<br>FRIENDS!</h1>
+        <div class="save-the-date fade-up" data-en="Save the date!" data-ru="Сохраните дату!">Save the date!</div>
+        <p class="description-text fade-up" data-en="This is our official wedding invitation! We would love to have you by our side on this special day." data-ru="Это официальное приглашение на нашу свадьбу! Мы будем рады видеть вас рядом с нами в этот особенный день.">This is our official wedding invitation! We would love to have you by our side on this special day.</p>
         <div class="line line-top"></div>
         <div class="date-block">
             <span class="date-number from-left-1">14</span><span class="dot">.</span><span class="date-number from-right">08</span><span class="dot">.</span><span class="date-number from-left-2">26</span>
         </div>
         <div class="line line-bottom"></div>
         <div class="calendar-section">
-            <div class="calendar-month">August 2026</div>
+            <div class="calendar-month" data-en="August 2026" data-ru="Август 2026">August 2026</div>
             <div class="calendar-grid">
-                <div class="weekday">mo</div><div class="weekday">tu</div><div class="weekday">we</div><div class="weekday">th</div><div class="weekday">fr</div><div class="weekday">sa</div><div class="weekday">su</div>
+                <div class="weekday" data-en="mo" data-ru="пн">mo</div><div class="weekday" data-en="tu" data-ru="вт">tu</div><div class="weekday" data-en="we" data-ru="ср">we</div><div class="weekday" data-en="th" data-ru="чт">th</div><div class="weekday" data-en="fr" data-ru="пт">fr</div><div class="weekday" data-en="sa" data-ru="сб">sa</div><div class="weekday" data-en="su" data-ru="вс">su</div>
                 <div class="day empty-day"></div><div class="day empty-day"></div><div class="day empty-day"></div><div class="day empty-day"></div><div class="day empty-day"></div><div class="day">1</div><div class="day">2</div>
                 <div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div>
                 <div class="day">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day special-day">14
@@ -407,17 +508,17 @@
     </div>
 </div>
 
-<!-- LOCATION SECTION (ФОТО ОРИГИНАЛ, БЕЗ ЗАСВЕТЛЕНИЯ) -->
+<!-- LOCATION SECTION -->
 <div class="location-section fade-up" id="locationSection">
     <div class="location-bg"></div>
     <div class="location-card">
         <div class="icon-scene"><svg viewBox="0 0 24 24" width="50" height="50"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#1a1a1a"/></svg></div>
-        <h2 class="location-title">VENUE</h2>
-        <div class="save-the-place">Save the place!</div>
+        <h2 class="location-title" data-en="VENUE" data-ru="МЕСТО">VENUE</h2>
+        <div class="save-the-place" data-en="Save the place!" data-ru="Сохраните место!">Save the place!</div>
         <p class="venue-name">SAVASAVA Restaurant</p>
         <p class="venue-address">Jocina Ada 21, Belgrade</p>
         <div class="location-links">
-            <a href="https://maps.app.goo.gl/UVpNNpDJ4QRaXcEAA" target="_blank" class="btn-maps">Show on map</a>
+            <a href="https://maps.app.goo.gl/UVpNNpDJ4QRaXcEAA" target="_blank" class="btn-maps" data-en="Show on map" data-ru="Показать на карте">Show on map</a>
         </div>
     </div>
 </div>
@@ -425,18 +526,18 @@
 <!-- TIMELINE -->
 <div class="timeline-screen" id="timelineScreen">
     <div class="timeline-container">
-        <h2 class="timeline-main-title fade-up">Timeline</h2>
-        <div class="timeline-subtitle fade-up">Of the day</div>
+        <h2 class="timeline-main-title fade-up" data-en="Timeline" data-ru="Тайминг">Timeline</h2>
+        <div class="timeline-subtitle fade-up" data-en="Of the day" data-ru="Дня">Of the day</div>
         <div class="timeline-middle-line"></div>
         <div class="timeline-list">
-            <div class="timeline-item slide-left"><div class="time">17:00</div><div class="timeline-desc">Guest arrival, welcome drinks &amp; aperitif</div></div>
-            <div class="timeline-item slide-left"><div class="time">17:30</div><div class="timeline-desc">Welcome speech by the couple, gathering of all guests &amp; photos</div></div>
-            <div class="timeline-item slide-right"><div class="time">18:30</div><div class="timeline-desc">Dinner begins</div></div>
-            <div class="timeline-item slide-right"><div class="time">20:00</div><div class="timeline-desc">An evening of music, conversations &amp; capturing memories</div></div>
-            <div class="timeline-item slide-right"><div class="time">21:00</div><div class="timeline-desc">Wedding cake ceremony &amp; serving</div></div>
-            <div class="timeline-item slide-right"><div class="time">21:30</div><div class="timeline-desc">Dessert, coffee, continued conversations &amp; dancing</div></div>
-            <div class="timeline-item slide-right"><div class="time">22:00</div><div class="timeline-desc">DJ &amp; Dancing under the summer night sky</div></div>
-            <div class="timeline-item slide-right"><div class="time">23:30</div><div class="timeline-desc">End of celebration</div></div>
+            <div class="timeline-item slide-left"><div class="time">17:00</div><div class="timeline-desc" data-en="Guest arrival, welcome drinks &amp; aperitif" data-ru="Сбор гостей, приветственный напиток">Guest arrival, welcome drinks &amp; aperitif</div></div>
+            <div class="timeline-item slide-left"><div class="time">17:30</div><div class="timeline-desc" data-en="Welcome speech by the couple, gathering of all guests &amp; photos" data-ru="Приветствие молодоженов, общий сбор &amp; фото">Welcome speech by the couple, gathering of all guests &amp; photos</div></div>
+            <div class="timeline-item slide-right"><div class="time">18:30</div><div class="timeline-desc" data-en="Dinner begins" data-ru="Начало ужина">Dinner begins</div></div>
+            <div class="timeline-item slide-right"><div class="time">20:00</div><div class="timeline-desc" data-en="An evening of music, conversations &amp; capturing memories" data-ru="Вечер музыки, разговоров &amp; воспоминаний">An evening of music, conversations &amp; capturing memories</div></div>
+            <div class="timeline-item slide-right"><div class="time">21:00</div><div class="timeline-desc" data-en="Wedding cake ceremony &amp; serving" data-ru="Церемония разрезания торта &amp; подача">Wedding cake ceremony &amp; serving</div></div>
+            <div class="timeline-item slide-right"><div class="time">21:30</div><div class="timeline-desc" data-en="Dessert, coffee, continued conversations &amp; dancing" data-ru="Десерт, кофе, разговоры &amp; танцы">Dessert, coffee, continued conversations &amp; dancing</div></div>
+            <div class="timeline-item slide-right"><div class="time">22:00</div><div class="timeline-desc" data-en="DJ &amp; Dancing under the summer night sky" data-ru="DJ &amp; Танцы под летним небом">DJ &amp; Dancing under the summer night sky</div></div>
+            <div class="timeline-item slide-right"><div class="time">23:30</div><div class="timeline-desc" data-en="End of celebration" data-ru="Окончание вечера">End of celebration</div></div>
         </div>
     </div>
 </div>
@@ -444,40 +545,40 @@
 <!-- DRESS CODE -->
 <div class="dresscode-screen" id="dresscodeScreen">
     <div class="dresscode-container">
-        <h1 class="dresscode-main-title" id="dresscodeMainTitle">Dress Code</h1>
-        <p class="dresscode-description" id="dresscodeDescription">August in Belgrade means sunshine, warm evenings, and real summer. That's why we don't want to limit you with strict rules or a specific color palette. Please come as you are in whatever makes you feel beautiful, comfortable, and yourself.</p>
+        <h1 class="dresscode-main-title" id="dresscodeMainTitle" data-en="Dress Code" data-ru="Дресс-код">Dress Code</h1>
+        <p class="dresscode-description" id="dresscodeDescription" data-en="August in Belgrade means sunshine, warm evenings, and real summer. That's why we don't want to limit you with strict rules or a specific color palette. Please come as you are in whatever makes you feel beautiful, comfortable, and yourself." data-ru="Август в Белграде — это солнце, теплые вечера и настоящее лето. Поэтому мы не хотим ограничивать вас строгими правилами или определенной цветовой гаммой. Приходите такими, какие вы есть, в том, в чем вы чувствуете себя красивыми, комфортно и собой.">August in Belgrade means sunshine, warm evenings, and real summer. That's why we don't want to limit you with strict rules or a specific color palette. Please come as you are in whatever makes you feel beautiful, comfortable, and yourself.</p>
     </div>
 </div>
 
 <!-- COUNTDOWN -->
 <div class="countdown-screen" id="countdownScreen">
-    <div class="countdown-dark-block">
-        <h2 class="countdown-title">Wedding countdown</h2>
-        <div class="countdown-subtitle">Waiting for you!</div>
+    <div class="countdown-dark-block countdown-animate" id="countdownBlock">
+        <h2 class="countdown-title" data-en="Wedding countdown" data-ru="До свадьбы осталось">Wedding countdown</h2>
+        <div class="countdown-subtitle" data-en="Waiting for you!" data-ru="Ждем вас!">Waiting for you!</div>
         <div class="countdown-divider"></div>
         <div class="timer-grid">
-            <div class="timer-item"><div class="timer-number" id="days">00</div><div class="timer-label">Days</div></div>
-            <div class="timer-item"><div class="timer-number" id="hours">00</div><div class="timer-label">Hours</div></div>
-            <div class="timer-item"><div class="timer-number" id="minutes">00</div><div class="timer-label">Minutes</div></div>
-            <div class="timer-item"><div class="timer-number" id="seconds">00</div><div class="timer-label">Seconds</div></div>
+            <div class="timer-item"><div class="timer-number" id="days">00</div><div class="timer-label" data-en="Days" data-ru="Дней">Days</div></div>
+            <div class="timer-item"><div class="timer-number" id="hours">00</div><div class="timer-label" data-en="Hours" data-ru="Часов">Hours</div></div>
+            <div class="timer-item"><div class="timer-number" id="minutes">00</div><div class="timer-label" data-en="Minutes" data-ru="Минут">Minutes</div></div>
+            <div class="timer-item"><div class="timer-number" id="seconds">00</div><div class="timer-label" data-en="Seconds" data-ru="Секунд">Seconds</div></div>
         </div>
     </div>
 </div>
 
-<!-- OUR CONCEPT (with slider) -->
+<!-- OUR CONCEPT -->
 <div class="wishes-screen" id="wishesScreen">
     <div class="wishes-container">
-        <h2 class="wishes-main-title anim-slide-up">Our Concept</h2>
+        <h2 class="wishes-main-title anim-slide-up" data-en="Our Concept" data-ru="Наша концепция">Our Concept</h2>
         
         <div class="slider-wrapper anim-slide-up">
             <button class="slider-arrow arrow-left" id="prevBtn">
                 <svg viewBox="0 0 24 24"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 6 4 12 10 18"></polyline></svg>
             </button>
             <div class="slider-content">
-                <div class="slide-text active">Our wedding is a meeting of two cultures — Russian and Danish. But above all, we are inspired by the Serbian tradition of celebrations, where the most important thing is people. Where you can sit at one long table for hours, talk, laugh, meet each other, enjoy delicious food, and simply be together.</div>
-                <div class="slide-text">This is exactly the atmosphere we want to create on this day. Without rush or a strict schedule — with the freedom to talk, raise toasts, share stories, dance, and enjoy time in great company.</div>
-                <div class="slide-text">We hope this evening will feel like a big summer dinner surrounded by our closest and dearest people: warm, heartfelt, and filled with genuine conversations, smiles, and new connections.</div>
-                <div class="slide-text">Your presence is the most precious gift to us. We would be deeply grateful for an envelope with warm wishes. For us, this day is about togetherness, love, and shared moments — and we can't wait to celebrate it with you.</div>
+                <div class="slide-text active" data-en="Our wedding is a meeting of two cultures — Russian and Danish. But above all, we are inspired by the Serbian tradition of celebrations, where the most important thing is people. Where you can sit at one long table for hours, talk, laugh, meet each other, enjoy delicious food, and simply be together." data-ru="Наша свадьба — это встреча двух культур — русской и датской. Но прежде всего нас вдохновляет сербская традиция праздников, где самое важное — это люди. Где можно часами сидеть за одним длинным столом, разговаривать, смеяться, знакомиться, наслаждаться вкусной едой и просто быть вместе.">Our wedding is a meeting of two cultures — Russian and Danish. But above all, we are inspired by the Serbian tradition of celebrations, where the most important thing is people. Where you can sit at one long table for hours, talk, laugh, meet each other, enjoy delicious food, and simply be together.</div>
+                <div class="slide-text" data-en="This is exactly the atmosphere we want to create on this day. Without rush or a strict schedule — with the freedom to talk, raise toasts, share stories, dance, and enjoy time in great company." data-ru="Именно такую атмосферу мы хотим создать в этот день. Без спешки и строгого графика — со свободой разговаривать, произносить тосты, делиться историями, танцевать и наслаждаться временем в отличной компании.">This is exactly the atmosphere we want to create on this day. Without rush or a strict schedule — with the freedom to talk, raise toasts, share stories, dance, and enjoy time in great company.</div>
+                <div class="slide-text" data-en="We hope this evening will feel like a big summer dinner surrounded by our closest and dearest people: warm, heartfelt, and filled with genuine conversations, smiles, and new connections." data-ru="Мы надеемся, что этот вечер будет похож на большой летний ужин в окружении самых близких и дорогих людей: теплый, душевный, наполненный искренними разговорами, улыбками и новыми знакомствами.">We hope this evening will feel like a big summer dinner surrounded by our closest and dearest people: warm, heartfelt, and filled with genuine conversations, smiles, and new connections.</div>
+                <div class="slide-text" data-en="Your presence is the most precious gift to us. We would be deeply grateful for an envelope with warm wishes. For us, this day is about togetherness, love, and shared moments — and we can't wait to celebrate it with you." data-ru="Ваше присутствие — самый ценный подарок для нас. Мы будем очень благодарны за конверт с теплыми пожеланиями. Для нас этот день — о единении, любви и общих моментах, и мы не можем дождаться, чтобы отпраздновать его с вами.">Your presence is the most precious gift to us. We would be deeply grateful for an envelope with warm wishes. For us, this day is about togetherness, love, and shared moments — and we can't wait to celebrate it with you.</div>
             </div>
             <button class="slider-arrow arrow-right" id="nextBtn">
                 <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="14 6 20 12 14 18"></polyline></svg>
@@ -485,7 +586,7 @@
         </div>
         
         <div class="wishes-vertical-divider anim-fade-in"></div>
-        <div class="pre-closing anim-slide-up">See you soon!<br>With love</div>
+        <div class="pre-closing anim-slide-up" data-en="See you soon!<br>With love" data-ru="До скорой встречи!<br>С любовью">See you soon!<br>With love</div>
         
         <div class="wishes-names-block">
             <span class="name-item anim-slide-left" id="odWishes">Od</span>
@@ -498,72 +599,71 @@
 <!-- RSVP FORM -->
 <div class="rsvp-screen" id="rsvpScreen">
     <div class="rsvp-container">
-        <h2 class="rsvp-title rsvp-animate">Guest Form</h2>
-        <p class="rsvp-deadline rsvp-animate">Please confirm your attendance by July 14</p>
+        <h2 class="rsvp-title rsvp-animate" data-en="Guest Form" data-ru="Анкета гостя">Guest Form</h2>
+        <p class="rsvp-deadline rsvp-animate" data-en="Please confirm your attendance by July 14" data-ru="Пожалуйста, подтвердите присутствие до 14 июля">Please confirm your attendance by July 14</p>
         <form id="guestForm" action="https://formspree.io/f/xeewyjkg" method="POST">
             <input type="hidden" name="_subject" value="New RSVP response">
             <div class="rsvp-grid">
 
                 <div class="form-group full-width rsvp-animate" style="margin-top: 20px;">
-                    <label>Full name</label>
-                    <input type="text" name="Full name" id="guestName" placeholder="e.g. Anna Petrova" required>
+                    <label data-en="Full name" data-ru="Ваше имя и фамилия">Full name</label>
+                    <input type="text" name="Full name" id="guestName" placeholder="e.g. Anna Petrova / например, Анна Петрова">
                 </div>
 
                 <div class="form-group full-width rsvp-animate">
-                    <label>Do you have a plus one?</label>
+                    <label data-en="Do you have a plus one?" data-ru="У вас будет гость?">Do you have a plus one?</label>
                     <div class="radio-group-horizontal">
-                        <label><input type="radio" name="Plus one" value="Yes"> Yes</label>
-                        <label><input type="radio" name="Plus one" value="No" checked> No</label>
+                        <label><input type="radio" name="Plus one" value="Yes" id="plusOneYes"> <span data-en="Yes" data-ru="Да">Yes</span></label>
+                        <label><input type="radio" name="Plus one" value="No" id="plusOneNo" checked> <span data-en="No" data-ru="Нет">No</span></label>
                     </div>
                 </div>
 
-                <div class="form-group full-width rsvp-animate" style="margin-top: -10px;">
-                    <label>If yes, full name of your guest</label>
+                <div class="form-group full-width rsvp-animate" id="guestNameField" style="display:none; margin-top: -10px;">
+                    <label data-en="If yes, full name of your guest" data-ru="Если да, имя и фамилия гостя">If yes, full name of your guest</label>
                     <input type="text" name="Guest full name" placeholder="e.g. Mark Johnson">
                 </div>
 
                 <div class="form-group full-width rsvp-animate">
-                    <label>Will you attend the wedding?</label>
+                    <label data-en="Will you attend the wedding?" data-ru="Вы придете на свадьбу?">Will you attend the wedding?</label>
                     <div class="radio-group-horizontal">
-                        <label><input type="radio" name="Attendance" value="Yes" required> Yes, with pleasure!</label>
-                        <label><input type="radio" name="Attendance" value="No"> Unfortunately, no</label>
+                        <label><input type="radio" name="Attendance" value="Yes"> <span data-en="Yes, with pleasure!" data-ru="Да, с радостью!">Yes, with pleasure!</span></label>
+                        <label><input type="radio" name="Attendance" value="No"> <span data-en="Unfortunately, no" data-ru="К сожалению, нет">Unfortunately, no</span></label>
                     </div>
                 </div>
 
                 <div class="form-group full-width rsvp-animate">
-                    <label>Do you have any allergies we should know about?</label>
-                    <input type="text" name="Allergies" id="guestAllergies" placeholder="e.g. nuts, gluten...">
+                    <label data-en="Do you have any allergies we should know about?" data-ru="Есть ли у вас аллергии, о которых нам стоит знать?">Do you have any allergies we should know about?</label>
+                    <input type="text" name="Allergies" id="guestAllergies" placeholder="e.g. nuts, gluten... / например, орехи, глютен...">
                 </div>
 
                 <div class="form-group full-width rsvp-animate">
-                    <label>Would you like to share a song for our playlist?</label>
+                    <label data-en="Would you like to share a song for our playlist?" data-ru="Хотите предложить песню для нашего плейлиста?">Would you like to share a song for our playlist?</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" id="songOtherCheck" name="Song share" value="Yes"> Yes, I have a song in mind</label>
+                        <label><input type="checkbox" id="songOtherCheck" name="Song share" value="Yes"> <span data-en="Yes, I have a song in mind" data-ru="Да, есть песня">Yes, I have a song in mind</span></label>
                     </div>
                     <div class="other-song-input" id="otherSongInput">
-                        <input type="text" name="Song suggestion" placeholder="Artist — Song title">
+                        <input type="text" name="Song suggestion" placeholder="Artist — Song title / Исполнитель — Название">
                     </div>
-                    <div class="drinks-hint">We'll do our best to include it!</div>
                 </div>
 
                 <div class="form-group full-width rsvp-animate">
-                    <label>Any other comments?</label>
-                    <input type="text" name="Comments" id="guestComments" placeholder="Anything else you'd like to share...">
+                    <label data-en="Any other comments?" data-ru="Другие комментарии?">Any other comments?</label>
+                    <input type="text" name="Comments" id="guestComments" placeholder="Anything else you'd like to share... / Что-то еще, чем хотите поделиться...">
                 </div>
 
             </div>
 
-            <button type="submit" class="submit-btn rsvp-animate">Send response</button>
+            <button type="submit" class="submit-btn rsvp-animate" data-en="Send response" data-ru="Отправить ответ">Send response</button>
         </form>
-        <div id="successMessage" class="success-message">Thank you! Your response has been sent. We look forward to celebrating with you.</div>
+        <div id="successMessage" class="success-message" data-en="Thank you! Your response has been sent. We look forward to celebrating with you." data-ru="Спасибо! Ваш ответ отправлен. Ждем вас на нашей свадьбе!">Thank you! Your response has been sent. We look forward to celebrating with you.</div>
     </div>
 </div>
 
 <!-- CONTACTS -->
 <div class="contacts-screen" id="contactsScreen">
     <div class="contacts-container">
-        <h2 class="contacts-title contacts-animate">Contacts</h2>
-        <div class="contacts-subtitle contacts-animate">Any questions?</div>
+        <h2 class="contacts-title contacts-animate" data-en="Contacts" data-ru="Контакты">Contacts</h2>
+        <div class="contacts-subtitle contacts-animate" data-en="Any questions?" data-ru="Остались вопросы?">Any questions?</div>
         <div class="contacts-list">
             <div class="contact-item contacts-animate">
                 <div class="contact-role">Julia</div>
@@ -583,6 +683,44 @@
 
 <script>
     (function() {
+        // ----- LANGUAGE SELECTOR -----
+        let currentLang = 'en';
+        const langModal = document.getElementById('langModal');
+        const langButtons = document.querySelectorAll('.lang-btn');
+
+        // Функция переключения языка
+        function setLanguage(lang) {
+            currentLang = lang;
+            // Все элементы с data-en и data-ru
+            document.querySelectorAll('[data-en][data-ru]').forEach(el => {
+                if (lang === 'en') {
+                    el.innerHTML = el.getAttribute('data-en');
+                } else {
+                    el.innerHTML = el.getAttribute('data-ru');
+                }
+            });
+            // Обновляем плейсхолдеры
+            document.querySelectorAll('input[placeholder]').forEach(el => {
+                const enPlaceholder = el.getAttribute('data-en-placeholder');
+                const ruPlaceholder = el.getAttribute('data-ru-placeholder');
+                if (enPlaceholder && ruPlaceholder) {
+                    el.placeholder = lang === 'en' ? enPlaceholder : ruPlaceholder;
+                }
+            });
+            // Скрываем модальное окно
+            langModal.classList.add('hidden');
+            // Запускаем прелоадер после выбора языка
+            setTimeout(updateLoader, 400);
+        }
+
+        // Обработчики кнопок языка
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
         // ----- PRELOADER (0–100%) -----
         let progress = 0;
         const fill = document.getElementById('loaderFill');
@@ -604,7 +742,6 @@
                 }, 500);
             }
         }
-        setTimeout(updateLoader, 400);
 
         // ----- FADE-UP -----
         const fadeElements = document.querySelectorAll('.fade-up');
@@ -681,6 +818,20 @@
             drObs.observe(dressScreen); 
         }
 
+        // ----- COUNTDOWN (СНИЗУ ВВЕРХ) -----
+        const countdownBlock = document.getElementById('countdownBlock');
+        if (countdownBlock) {
+            const cdObs = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        countdownBlock.classList.add('visible');
+                        cdObs.disconnect();
+                    }
+                });
+            }, { threshold: 0.2 });
+            cdObs.observe(countdownBlock);
+        }
+
         // ----- RSVP ANIMATION -----
         const rsvpAnimate = document.querySelectorAll('.rsvp-animate');
         if (rsvpAnimate.length) {
@@ -736,13 +887,38 @@
         updateTimer();
         setInterval(updateTimer, 1000);
 
+        // ----- PLUS ONE TOGGLE -----
+        const plusOneYes = document.getElementById('plusOneYes');
+        const plusOneNo = document.getElementById('plusOneNo');
+        const guestNameField = document.getElementById('guestNameField');
+
+        if (plusOneYes && plusOneNo && guestNameField) {
+            plusOneYes.addEventListener('change', function() {
+                if (this.checked) {
+                    guestNameField.style.display = 'block';
+                }
+            });
+            plusOneNo.addEventListener('change', function() {
+                if (this.checked) {
+                    guestNameField.style.display = 'none';
+                    const guestInput = guestNameField.querySelector('input');
+                    if (guestInput) guestInput.value = '';
+                }
+            });
+        }
+
         // ----- "SHARE A SONG" CHECKBOX -----
         const songCheck = document.getElementById('songOtherCheck');
         const songInput = document.getElementById('otherSongInput');
         if (songCheck && songInput) {
             songCheck.addEventListener('change', function() {
-                if (this.checked) songInput.classList.add('active');
-                else songInput.classList.remove('active');
+                if (this.checked) {
+                    songInput.style.display = 'block';
+                } else {
+                    songInput.style.display = 'none';
+                    const input = songInput.querySelector('input');
+                    if (input) input.value = '';
+                }
             });
         }
 
@@ -753,12 +929,6 @@
         if (form) {
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
-
-                const nameInput = document.getElementById('guestName');
-                if (nameInput && !nameInput.value.trim()) {
-                    alert('Please enter your full name.');
-                    return;
-                }
 
                 const formData = new FormData(form);
 
@@ -772,14 +942,24 @@
                     if (response.ok) {
                         successMessage.classList.add('show');
                         form.reset();
+                        
                         document.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = false);
                         document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
-                        const otherInputEl = document.getElementById('otherSongInput');
-                        if (otherInputEl) {
-                            otherInputEl.classList.remove('active');
-                            const textInput = otherInputEl.querySelector('input');
-                            if (textInput) textInput.value = '';
+                        
+                        if (guestNameField) {
+                            guestNameField.style.display = 'none';
+                            const guestInput = guestNameField.querySelector('input');
+                            if (guestInput) guestInput.value = '';
                         }
+                        
+                        if (songInput) {
+                            songInput.style.display = 'none';
+                            const songTextInput = songInput.querySelector('input');
+                            if (songTextInput) songTextInput.value = '';
+                        }
+                        
+                        if (plusOneNo) plusOneNo.checked = true;
+                        
                         setTimeout(() => successMessage.classList.remove('show'), 6000);
                         successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     } else {
@@ -847,6 +1027,14 @@
                 rObs.observe(rightEl); 
             } 
         }
+
+        // Добавляем data-атрибуты для плейсхолдеров
+        document.querySelectorAll('input[placeholder]').forEach(el => {
+            const en = el.placeholder;
+            const ru = el.getAttribute('data-ru-placeholder') || en;
+            el.setAttribute('data-en-placeholder', en);
+            el.setAttribute('data-ru-placeholder', ru);
+        });
 
     })();
 </script>
