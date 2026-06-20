@@ -620,15 +620,15 @@
                 </div>
 
                 <div class="form-group full-width rsvp-animate">
-                    <label data-en="Do you have a plus one?" data-ru="У вас будет гость?">Do you have a plus one?</label>
+                    <label data-en="Do you have a plus one?" data-ru="У вас будет гость (+1)?">Do you have a plus one?</label>
                     <div class="radio-group-horizontal">
                         <label><input type="radio" name="Plus one" value="Yes" id="plusOneYes"> <span data-en="Yes" data-ru="Да">Yes</span></label>
-                        <label><input type="radio" name="Plus one" value="No" id="plusOneNo" checked> <span data-en="No" data-ru="Нет">No</span></label>
+                        <label><input type="radio" name="Plus one" value="No" id="plusOneNo"> <span data-en="No" data-ru="Нет">No</span></label>
                     </div>
                 </div>
 
                 <div class="form-group full-width rsvp-animate" id="guestNameField" style="display:none; margin-top: -10px;">
-                    <label data-en="If yes, full name of your guest" data-ru="Если да, имя и фамилия гостя">If yes, full name of your guest</label>
+                    <label data-en="If yes, full name of your guest" data-ru="Имя и фамилия гостя">If yes, full name of your guest</label>
                     <input type="text" name="Guest full name" placeholder="e.g. Mark Johnson" data-en-placeholder="e.g. Mark Johnson" data-ru-placeholder="например, Марк Джонсон">
                 </div>
 
@@ -899,7 +899,9 @@
         const guestNameField = document.getElementById('guestNameField');
 
         if (plusOneYes && plusOneNo && guestNameField) {
-            // Изначально поле скрыто, так как No выбрано по умолчанию
+            // Изначально оба радиокнопки не выбраны, поле скрыто
+            plusOneYes.checked = false;
+            plusOneNo.checked = false;
             guestNameField.style.display = 'none';
             
             plusOneYes.addEventListener('change', function() {
@@ -944,9 +946,6 @@
                             const guestInput = guestNameField.querySelector('input');
                             if (guestInput) guestInput.value = '';
                         }
-                        
-                        // Устанавливаем "No" для plus one по умолчанию
-                        if (plusOneNo) plusOneNo.checked = true;
                         
                         // Обновляем плейсхолдеры после сброса
                         document.querySelectorAll('input[placeholder]').forEach(el => {
