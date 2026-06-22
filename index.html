@@ -148,7 +148,7 @@
             background-color: #ffffff;
         }
 
-        /* ----- FIRST SCREEN ----- */
+        /* ----- FIRST SCREEN (НОВЫЙ ЛЁГКИЙ ШРИФТ) ----- */
         .first-screen {
             position: relative;
             width: 100%;
@@ -164,17 +164,17 @@
         }
         .first-screen .title {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 400;
+            font-weight: 300;
             font-size: clamp(32px, 7vw, 52px);
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             color: #1a1a1a;
             margin-bottom: 6px;
         }
         .first-screen .date {
             font-family: 'Lora', serif;
-            font-weight: 400;
+            font-weight: 300;
             font-size: clamp(15px, 2.8vw, 20px);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             color: #555;
             margin-bottom: 16px;
         }
@@ -190,17 +190,17 @@
         }
         .first-screen .names h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 400;
+            font-weight: 300;
             font-size: clamp(28px, 5vw, 40px);
             color: #1a1a1a;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
         }
         .first-screen .names span {
             font-family: 'Lora', serif;
-            font-weight: 400;
+            font-weight: 300;
             font-size: clamp(20px, 3.5vw, 30px);
             color: #555;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
         .first-screen .scroll-down {
             position: absolute;
@@ -220,8 +220,8 @@
             white-space: nowrap;
             z-index: 20;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            letter-spacing: 1.2px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
             backdrop-filter: blur(2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transition: background 0.2s ease, transform 0.2s ease;
@@ -240,11 +240,11 @@
             stroke: #ffffff;
         }
 
-        /* ----- АНИМАЦИИ ----- */
+        /* ----- АНИМАЦИИ (только при появлении в области видимости) ----- */
         .fade-up {
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 2.5s cubic-bezier(0.25, 0.9, 0.3, 1), transform 2.5s cubic-bezier(0.25, 0.9, 0.3, 1);
+            transition: opacity 1.8s cubic-bezier(0.25, 0.9, 0.3, 1), transform 1.8s cubic-bezier(0.25, 0.9, 0.3, 1);
         }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
 
@@ -254,20 +254,20 @@
         .save-the-date { font-family: 'Pinyon Script', cursive; font-size: clamp(2rem, 4.5vw, 2.4rem); color: #1a1a1a; margin-bottom: 25px; }
         .description-text { font-family: 'Lora', serif; font-size: 0.85rem; line-height: 1.6; color: #555; font-weight: 400; letter-spacing: 0.5px; max-width: 320px; margin: 0 auto 35px; }
 
-        .line { width: 1px; background: #1a1a1a; height: 50px; margin: 0 auto; opacity: 0; transform: scaleY(0); transition: opacity 3.5s cubic-bezier(0.2,0.9,0.3,1.1), transform 3.5s cubic-bezier(0.2,0.9,0.3,1.1); }
+        .line { width: 1px; background: #1a1a1a; height: 50px; margin: 0 auto; opacity: 0; transform: scaleY(0); transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1.1), transform 2.5s cubic-bezier(0.2,0.9,0.3,1.1); }
         .line-top { margin-bottom: 25px; transform-origin: top; }
         .line-bottom { margin-top: 25px; margin-bottom: 40px; transform-origin: bottom; }
         .line.visible { opacity: 0.6; transform: scaleY(1); }
 
         .date-block { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 5px; }
         .date-number { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6.5vw, 3.5rem); font-weight: 400; color: #1a1a1a; line-height: 0.9; opacity: 0; }
-        .from-left-1, .from-left-2 { transform: translateX(-100px); transition: opacity 3.5s cubic-bezier(0.2,0.9,0.3,1), transform 3.5s cubic-bezier(0.2,0.9,0.3,1); }
-        .from-right { transform: translateX(100px); transition: opacity 3.5s cubic-bezier(0.2,0.9,0.3,1), transform 3.5s cubic-bezier(0.2,0.9,0.3,1); }
+        .from-left-1, .from-left-2 { transform: translateX(-100px); transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1), transform 2.5s cubic-bezier(0.2,0.9,0.3,1); }
+        .from-right { transform: translateX(100px); transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1), transform 2.5s cubic-bezier(0.2,0.9,0.3,1); }
         .date-number.visible { opacity: 1; transform: translateX(0); }
-        .dot { font-size: 1.3rem; color: #1a1a1a; margin: 0; opacity: 0; transition: opacity 3s cubic-bezier(0.2,0.9,0.3,1); }
+        .dot { font-size: 1.3rem; color: #1a1a1a; margin: 0; opacity: 0; transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1); }
         .dot.visible { opacity: 1; }
 
-        .calendar-section { max-width: 280px; margin: 0 auto; opacity: 0; transform: translateY(80px); transition: opacity 4s cubic-bezier(0.2,0.9,0.3,1), transform 4s cubic-bezier(0.2,0.9,0.3,1); }
+        .calendar-section { max-width: 280px; margin: 0 auto; opacity: 0; transform: translateY(80px); transition: opacity 3s cubic-bezier(0.2,0.9,0.3,1), transform 3s cubic-bezier(0.2,0.9,0.3,1); }
         .calendar-section.visible { opacity: 1; transform: translateY(0); }
         .calendar-month { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px; }
         .calendar-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 12px 6px; }
@@ -277,7 +277,7 @@
         .heart-svg { position: absolute; width: 48px; height: 48px; top: 50%; left: 50%; transform: translate(-50%, -52%); pointer-events: none; }
         .heart-path { stroke: #1a1a1a; stroke-width: 1.2; fill: none; }
 
-        /* ----- LOCATION SECTION with SLIDER ----- */
+        /* ----- LOCATION SECTION ----- */
         .location-section {
             position: relative;
             max-width: 450px;
@@ -357,7 +357,6 @@
             display: block;
         }
 
-        /* классические стрелки */
         .slider-controls {
             display: flex;
             justify-content: center;
@@ -401,7 +400,7 @@
         .timeline-subtitle { font-family: 'Pinyon Script', cursive; font-size: clamp(1.3rem,3.5vw,1.6rem); margin-bottom: 25px; }
         .timeline-middle-line { width: 1px; background: #b5b5b5; margin: 0 auto 30px; height: 40px; }
         .timeline-list { margin: 30px 0; }
-        .timeline-item { margin: 25px 0; opacity: 0; transform: translateX(-50px); transition: opacity 2s cubic-bezier(0.25,0.9,0.3,1), transform 2s cubic-bezier(0.25,0.9,0.3,1); }
+        .timeline-item { margin: 25px 0; opacity: 0; transform: translateX(-50px); transition: opacity 1.8s cubic-bezier(0.25,0.9,0.3,1), transform 1.8s cubic-bezier(0.25,0.9,0.3,1); }
         .timeline-item.slide-right { transform: translateX(50px); }
         .timeline-item.visible { opacity: 1; transform: translateX(0); }
         .timeline-item .time {
@@ -432,7 +431,7 @@
             margin-bottom: 24px;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 3s cubic-bezier(0.25, 0.8, 0.4, 1), transform 3s cubic-bezier(0.25, 0.8, 0.4, 1);
+            transition: opacity 2s cubic-bezier(0.25, 0.8, 0.4, 1), transform 2s cubic-bezier(0.25, 0.8, 0.4, 1);
         }
         .dresscode-description {
             font-family: 'Lora', serif;
@@ -444,7 +443,7 @@
             margin: 0 auto 30px auto;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 3s cubic-bezier(0.25, 0.8, 0.4, 1), transform 3s cubic-bezier(0.25, 0.8, 0.4, 1);
+            transition: opacity 2s cubic-bezier(0.25, 0.8, 0.4, 1), transform 2s cubic-bezier(0.25, 0.8, 0.4, 1);
         }
         .dresscode-main-title.visible, .dresscode-description.visible { opacity: 1; transform: translate(0); }
 
@@ -473,13 +472,13 @@
             margin-bottom: 14px;
         }
         .timer-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; }
-        .countdown-animate { opacity: 0; transform: translateY(70px); transition: opacity 2.8s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 2.8s cubic-bezier(0.2, 0.9, 0.3, 1.1); }
+        .countdown-animate { opacity: 0; transform: translateY(70px); transition: opacity 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1); }
         .countdown-animate.visible { opacity: 1; transform: translateY(0); }
 
-        /* CONCEPT — текст по центру, как dress code */
+        /* CONCEPT */
         .wishes-screen { background: #ffffff; padding: 50px 20px 70px; }
         .wishes-container { max-width: 650px; margin: 0 auto; text-align: center; }
-        .anim-slide-up, .anim-fade-in, .anim-slide-left, .anim-slide-right { opacity: 0; transition: opacity 3s cubic-bezier(0.25, 0.8, 0.4, 1), transform 3s cubic-bezier(0.25, 0.8, 0.4, 1); }
+        .anim-slide-up, .anim-fade-in, .anim-slide-left, .anim-slide-right { opacity: 0; transition: opacity 2.5s cubic-bezier(0.25, 0.8, 0.4, 1), transform 2.5s cubic-bezier(0.25, 0.8, 0.4, 1); }
         .anim-slide-up { transform: translateY(50px); }
         .anim-slide-left { transform: translateX(-50px); }
         .anim-slide-right { transform: translateX(50px); }
@@ -493,7 +492,6 @@
             letter-spacing: 4px;
             margin-bottom: 10px;
         }
-        /* концепция — центрированный текст, как dress code */
         .concept-text-block {
             font-family: 'Lora', serif;
             font-size: 13px;
@@ -519,10 +517,10 @@
         .wishes-names-block { display: flex; flex-direction: column; align-items: center; margin-bottom: 45px; }
         .name-item {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 400;
+            font-weight: 300;
             font-size: 46px;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 6px;
             line-height: 1.1;
             color: #121212;
         }
@@ -588,7 +586,7 @@
         .contacts-divider { width: 1px; height: 40px; background: #d0d0d0; margin: 0 auto 30px; }
         .contacts-copyright { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 1.5px; color: #aaa; text-transform: uppercase; }
 
-        .rsvp-animate, .contacts-animate { opacity: 0; transform: translateY(50px); transition: opacity 2.8s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 2.8s cubic-bezier(0.2, 0.9, 0.3, 1.1); }
+        .rsvp-animate, .contacts-animate { opacity: 0; transform: translateY(50px); transition: opacity 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1); }
         .rsvp-animate.visible, .contacts-animate.visible { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 580px) { .name-item { font-size: 36px; letter-spacing: 4px; } }
@@ -659,7 +657,7 @@
     </div>
 </div>
 
-<!-- LOCATION SECTION with SLIDER (2 photos) -->
+<!-- LOCATION SECTION -->
 <div class="location-section fade-up" id="locationSection">
     <div class="location-card">
         <div class="icon-scene"><svg viewBox="0 0 24 24" width="50" height="50"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#1a1a1a"/></svg></div>
@@ -726,7 +724,7 @@
     </div>
 </div>
 
-<!-- CONCEPT — текст по центру, как dress code -->
+<!-- CONCEPT -->
 <div class="wishes-screen" id="wishesScreen">
     <div class="wishes-container">
         <h2 class="wishes-main-title anim-slide-up" data-en="Our Concept" data-ru="Наша концепция">Our Concept</h2>
@@ -868,7 +866,7 @@
             }
         }
 
-        // ----- LOCATION SLIDER (классические стрелки, без точек) -----
+        // ----- LOCATION SLIDER -----
         const slides = document.querySelectorAll('#locationSlider .slide');
         const prevBtn = document.getElementById('prevSlideBtn');
         const nextBtn = document.getElementById('nextSlideBtn');
@@ -888,14 +886,16 @@
             });
         }
 
-        // ----- АНИМАЦИИ -----
+        // ----- АНИМАЦИИ ТОЛЬКО ПРИ ПОЯВЛЕНИИ В ОБЛАСТИ ВИДИМОСТИ -----
         function createScrollObserver(selector, className, delay = 400, threshold = 0.15, rootMargin = "0px 0px -50px 0px") {
             const elements = document.querySelectorAll(selector);
             if (!elements.length) return;
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
-                        setTimeout(() => entry.target.classList.add(className), delay + index * 100);
+                        setTimeout(() => {
+                            entry.target.classList.add(className);
+                        }, delay + index * 100);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -903,8 +903,10 @@
             elements.forEach(el => observer.observe(el));
         }
 
+        // базовые fade-up
         createScrollObserver('.fade-up', 'visible', 400, 0.15);
 
+        // второй экран (линии, дата, календарь)
         const secondContainer = document.querySelector('.invitation-container');
         if (secondContainer) {
             const obs = new IntersectionObserver((entries) => {
@@ -922,6 +924,7 @@
             obs.observe(secondContainer);
         }
 
+        // location
         const locationSection = document.getElementById('locationSection');
         if (locationSection) {
             const locObs = new IntersectionObserver((entries) => {
@@ -935,6 +938,7 @@
             locObs.observe(locationSection);
         }
 
+        // timeline
         const timelineContainer = document.querySelector('.timeline-container');
         if (timelineContainer) {
             const obs = new IntersectionObserver((entries) => {
@@ -950,6 +954,7 @@
             obs.observe(timelineContainer);
         }
 
+        // dress code
         const dressScreen = document.getElementById('dresscodeScreen');
         if (dressScreen) { 
             const drObs = new IntersectionObserver((e) => { 
@@ -966,6 +971,7 @@
             drObs.observe(dressScreen); 
         }
 
+        // countdown
         const countdownBlock = document.getElementById('countdownBlock');
         if (countdownBlock) {
             const cdObs = new IntersectionObserver((entries) => {
@@ -979,6 +985,7 @@
             cdObs.observe(countdownBlock);
         }
 
+        // rsvp
         const rsvpAnimate = document.querySelectorAll('.rsvp-animate');
         if (rsvpAnimate.length) {
             const rsvpObserver = new IntersectionObserver((entries) => {
@@ -995,6 +1002,7 @@
             if (rsvpContainer) rsvpObserver.observe(rsvpContainer);
         }
 
+        // contacts
         const contactsAnimate = document.querySelectorAll('.contacts-animate');
         if (contactsAnimate.length) {
             const contactsObserver = new IntersectionObserver((entries) => {
@@ -1011,6 +1019,7 @@
             if (contactsContainer) contactsObserver.observe(contactsContainer);
         }
 
+        // concept
         const wishesContainer = document.querySelector('.wishes-container');
         if (wishesContainer) { 
             const topObs = new IntersectionObserver((e) => { 
