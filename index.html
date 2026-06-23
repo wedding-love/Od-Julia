@@ -250,6 +250,17 @@
         }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+        /* АНИМАЦИЯ ДЛЯ ФОТО СНИЗУ ВВЕРХ */
+        .slide-up {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 1.2s cubic-bezier(0.25, 0.9, 0.3, 1), transform 1.2s cubic-bezier(0.25, 0.9, 0.3, 1);
+        }
+        .slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .second-screen { width: 100%; background: #fafafa; padding: 40px 20px; }
         .invitation-container { text-align: center; max-width: 420px; margin: 0 auto; }
 
@@ -645,7 +656,7 @@
             opacity: 0.8;
         }
 
-        /* ФОТО ПЕРЕД RSVP — ТОЛЬКО ЗДЕСЬ, МИНИМАЛЬНЫЙ ОТСТУП */
+        /* ФОТО ПЕРЕД RSVP — АНИМАЦИЯ СНИЗУ ВВЕРХ */
         .rsvp-photo {
             max-width: 400px;
             margin: 0 auto 5px auto;
@@ -977,7 +988,6 @@
         <div class="wishes-vertical-divider anim-fade-in"></div>
         <div class="pre-closing anim-slide-up" data-en="See you soon!<br>With love" data-ru="До скорой встречи!<br>С любовью">See you soon!<br>With love</div>
 
-        <!-- ФОТО УБРАНО! ТОЛЬКО ИМЕНА -->
         <div class="wishes-names-block">
             <span class="name-item anim-slide-left" id="juliaWishes">Julia</span>
             <span class="ampersand-item anim-slide-left">&</span>
@@ -986,8 +996,8 @@
     </div>
 </div>
 
-<!-- ФОТО ПЕРЕД RSVP — ОСТАВЛЕНО -->
-<div class="rsvp-photo">
+<!-- ФОТО ПЕРЕД RSVP — С АНИМАЦИЕЙ СНИЗУ ВВЕРХ -->
+<div class="rsvp-photo slide-up" id="rsvpPhoto">
     <img src="IMG_7873.png" alt="Julia & Od" onerror="this.style.display='none'">
 </div>
 
@@ -1298,6 +1308,20 @@
                 }, { threshold: 0.5, rootMargin: "0px 0px -50px 0px" }); 
                 rObs.observe(rightEl); 
             } 
+        }
+
+        // ----- АНИМАЦИЯ ДЛЯ ФОТО ПЕРЕД RSVP -----
+        const rsvpPhoto = document.getElementById('rsvpPhoto');
+        if (rsvpPhoto) {
+            const photoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        rsvpPhoto.classList.add('visible');
+                        photoObserver.disconnect();
+                    }
+                });
+            }, { threshold: 0.2, rootMargin: "0px 0px -30px 0px" });
+            photoObserver.observe(rsvpPhoto);
         }
 
         // ----- SCROLL BUTTON -----
