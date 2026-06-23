@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Wedding Invitation | Julia & Od Jacobsen</title>
 
-    <!-- ЗАМЕНЁННЫЕ ШРИФТЫ: Playfair Display (заголовки), Lora (текст), Inter (мелкий текст), Dancing Script (акценты) -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@100;200;300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- НОВЫЙ НАБОР ШРИФТОВ: Cormorant Garamond (заголовки), Quicksand (текст), Josefin Sans (мелкий), Great Vibes (акценты) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
         /* ----- PRELOADER ----- */
@@ -43,10 +43,10 @@
             transition: width 0.2s linear;
         }
         #preloader .loader-percent {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Josefin Sans', sans-serif;
             font-size: 13px;
-            font-weight: 400;
-            letter-spacing: 2px;
+            font-weight: 300;
+            letter-spacing: 3px;
             color: #1a1a1a;
         }
 
@@ -74,16 +74,16 @@
             pointer-events: none;
         }
         #langModal .lang-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: clamp(32px, 6vw, 48px);
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             color: #1a1a1a;
             margin-bottom: 8px;
             text-transform: uppercase;
         }
         #langModal .lang-sub {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: clamp(14px, 2vw, 18px);
             font-weight: 300;
             color: #777;
@@ -97,10 +97,10 @@
             justify-content: center;
         }
         .lang-btn {
-            font-family: 'Playfair Display', serif;
-            font-weight: 300;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
             font-size: clamp(18px, 3vw, 24px);
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             padding: 16px 45px;
             border: 1px solid #1a1a1a;
             background: transparent;
@@ -144,7 +144,7 @@
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Quicksand', sans-serif;
             background-color: #ffffff;
         }
 
@@ -163,18 +163,18 @@
             text-align: center;
         }
         .first-screen .title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: clamp(32px, 7vw, 52px);
-            letter-spacing: 8px;
+            letter-spacing: 10px;
             color: #1a1a1a;
             margin-bottom: 6px;
         }
         .first-screen .date {
-            font-family: 'Lora', serif;
-            font-weight: 400;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 300;
             font-size: clamp(15px, 2.8vw, 20px);
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: #555;
             margin-bottom: 16px;
         }
@@ -189,18 +189,18 @@
             display: block;
         }
         .first-screen .names h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: clamp(28px, 5vw, 40px);
             color: #1a1a1a;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
         }
         .first-screen .names span {
-            font-family: 'Lora', serif;
-            font-weight: 400;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 300;
             font-size: clamp(20px, 3.5vw, 30px);
             color: #555;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
         }
         .first-screen .scroll-down {
             position: absolute;
@@ -219,9 +219,9 @@
             cursor: pointer;
             white-space: nowrap;
             z-index: 20;
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            letter-spacing: 1.5px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 300;
+            letter-spacing: 2px;
             backdrop-filter: blur(2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transition: background 0.2s ease, transform 0.2s ease;
@@ -252,26 +252,26 @@
         .invitation-container { text-align: center; max-width: 400px; margin: 0 auto; }
 
         .invitation-container .title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: clamp(2rem, 4.5vw, 2.5rem);
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             line-height: 1.2;
             color: #1a1a1a;
             margin-bottom: 20px;
         }
         .save-the-date {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: clamp(2rem, 4.5vw, 2.4rem);
             color: #1a1a1a;
             margin-bottom: 25px;
         }
         .description-text {
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 0.85rem;
             line-height: 1.6;
             color: #555;
-            font-weight: 400;
+            font-weight: 300;
             letter-spacing: 0.5px;
             max-width: 320px;
             margin: 0 auto 35px;
@@ -284,7 +284,7 @@
 
         .date-block { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 5px; }
         .date-number {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(2.8rem, 6.5vw, 3.5rem);
             font-weight: 300;
             color: #1a1a1a;
@@ -300,24 +300,25 @@
         .calendar-section { max-width: 280px; margin: 0 auto; opacity: 0; transform: translateY(80px); transition: opacity 3s cubic-bezier(0.2,0.9,0.3,1), transform 3s cubic-bezier(0.2,0.9,0.3,1); }
         .calendar-section.visible { opacity: 1; transform: translateY(0); }
         .calendar-month {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: 1.3rem;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             margin-bottom: 20px;
         }
         .calendar-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 12px 6px; }
         .weekday {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.7rem;
-            font-weight: 400;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 300;
             color: #999;
             text-transform: lowercase;
+            letter-spacing: 0.5px;
         }
         .day {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.85rem;
             font-weight: 300;
             color: #1a1a1a;
             position: relative;
@@ -349,33 +350,33 @@
         }
         .icon-scene { width: 70px; height: 70px; margin: 0 auto 20px; }
         .location-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: clamp(1.6rem,4vw,2rem);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             margin-bottom: 10px;
         }
         .save-the-place {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: clamp(2rem,5vw,2.5rem);
             margin-bottom: 20px;
         }
         .venue-name {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 300;
             line-height: 1.5;
             max-width: 280px;
             margin: 0 auto 10px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: #1a1a1a;
         }
         .venue-address {
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 0.85rem;
-            font-weight: 400;
+            font-weight: 300;
             color: #555;
             margin-bottom: 15px;
         }
@@ -426,8 +427,8 @@
             align-items: center;
             justify-content: center;
             transition: opacity 0.2s;
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 34px;
             font-weight: 300;
             color: #1a1a1a;
             line-height: 1;
@@ -442,10 +443,10 @@
             background: #1a1a1a;
             color: #fff;
             text-decoration: none;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Josefin Sans', sans-serif;
             font-size: 0.6rem;
-            font-weight: 400;
-            letter-spacing: 1.5px;
+            font-weight: 300;
+            letter-spacing: 2px;
             padding: 10px 20px;
             text-transform: uppercase;
             cursor: pointer;
@@ -458,14 +459,14 @@
         .timeline-screen { background: #fff; padding: 40px 20px 50px; }
         .timeline-container { max-width: 400px; margin: 0 auto; text-align: center; }
         .timeline-main-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: clamp(1.8rem,4.5vw,2.2rem);
             text-transform: uppercase;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
         }
         .timeline-subtitle {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: clamp(1.3rem,3.5vw,1.6rem);
             margin-bottom: 25px;
         }
@@ -475,28 +476,29 @@
         .timeline-item.slide-right { transform: translateX(50px); }
         .timeline-item.visible { opacity: 1; transform: translateX(0); }
         .timeline-item .time {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 32px;
             font-weight: 300;
+            letter-spacing: 2px;
         }
         .timeline-item .timeline-desc {
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 14px;
             color: #333;
             max-width: 300px;
             margin: 0 auto;
-            font-weight: 400;
+            font-weight: 300;
         }
 
         /* ----- DRESS CODE ----- */
         .dresscode-screen { background: #fff; padding: 40px 16px 50px; }
         .dresscode-container { width: 100%; max-width: 450px; margin: 0 auto; text-align: center; }
         .dresscode-main-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: 42px;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 6px;
             line-height: 1.2;
             color: #121212;
             margin-bottom: 24px;
@@ -505,9 +507,9 @@
             transition: opacity 2s cubic-bezier(0.25, 0.8, 0.4, 1), transform 2s cubic-bezier(0.25, 0.8, 0.4, 1);
         }
         .dresscode-description {
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 13px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 1.8;
             color: #555555;
             max-width: 400px;
@@ -522,17 +524,17 @@
         .countdown-screen { background: #000000; padding: 60px 16px 70px; }
         .countdown-dark-block { max-width: 450px; margin: 0 auto; text-align: center; }
         .countdown-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: 38px;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             color: #fff;
             max-width: 340px;
             margin: 0 auto 12px;
         }
         .countdown-subtitle {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: 34px;
             color: #fff;
             margin-bottom: 40px;
@@ -541,18 +543,20 @@
         .timer-grid { display: flex; justify-content: center; max-width: 360px; margin: 0 auto; }
         .timer-item { flex: 1; text-align: center; }
         .timer-number {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 46px;
             font-weight: 300;
             color: #fff;
             margin-bottom: 14px;
+            letter-spacing: 2px;
         }
         .timer-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 10px;
             font-weight: 300;
             color: rgba(255,255,255,0.4);
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         .countdown-animate { opacity: 0; transform: translateY(70px); transition: opacity 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1); }
         .countdown-animate.visible { opacity: 1; transform: translateY(0); }
@@ -567,17 +571,17 @@
         .anim-fade-in { transform: none; }
         .anim-slide-up.visible, .anim-fade-in.visible, .anim-slide-left.visible, .anim-slide-right.visible { opacity: 1; transform: translate(0) !important; }
         .wishes-main-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: 42px;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             margin-bottom: 10px;
         }
         .concept-text-block {
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 13px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 1.9;
             color: #555555;
             max-width: 580px;
@@ -589,25 +593,25 @@
         .concept-text-block p:last-child { margin-bottom: 0; }
         .wishes-vertical-divider { width: 1px; height: 70px; background-color: #b5b5b5; margin: 0 auto 35px auto; }
         .pre-closing {
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 13px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 1.6;
             color: #121212;
             margin-bottom: 35px;
         }
         .wishes-names-block { display: flex; flex-direction: column; align-items: center; margin-bottom: 45px; }
         .name-item {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: 46px;
             text-transform: uppercase;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             line-height: 1.1;
             color: #121212;
         }
         .ampersand-item {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-style: italic;
             font-size: 38px;
             font-weight: 300;
@@ -619,19 +623,19 @@
         .rsvp-screen { background: #fff; padding: 40px 20px 60px; }
         .rsvp-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px 30px; text-align: left; }
         .rsvp-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: 32px;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: #1a1a1a;
             text-align: center;
             margin-bottom: 20px;
         }
         .rsvp-deadline {
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 12px;
-            font-weight: 400;
+            font-weight: 300;
             color: #777;
             text-align: center;
             margin-bottom: 30px;
@@ -642,11 +646,11 @@
         .form-group { margin-bottom: 0; }
         .form-group label {
             display: block;
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-bottom: 6px;
             color: #1a1a1a;
         }
@@ -655,8 +659,9 @@
             padding: 10px 0;
             border: none;
             border-bottom: 1px solid #ddd;
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 15px;
+            font-weight: 300;
             background: transparent;
             outline: none;
             color: #1a1a1a;
@@ -667,12 +672,12 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-weight: 400;
+            font-weight: 300;
             text-transform: none;
             font-size: 14px;
             margin-bottom: 0;
             cursor: pointer;
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
         }
         .radio-group-horizontal input { width: auto; accent-color: #1a1a1a; }
         .other-song-input { margin-top: 6px; display: block; }
@@ -681,8 +686,9 @@
             padding: 8px 0;
             border: none;
             border-bottom: 1px solid #ddd;
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 14px;
+            font-weight: 300;
             background: transparent;
             outline: none;
             color: #1a1a1a;
@@ -695,10 +701,10 @@
             color: white;
             border: none;
             padding: 14px;
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
             cursor: pointer;
             margin-top: 30px;
@@ -711,8 +717,9 @@
             background: #e8f5e9;
             border-left: 3px solid #2e7d32;
             color: #1e5a22;
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 13px;
+            font-weight: 300;
             border-radius: 4px;
             display: none;
         }
@@ -723,18 +730,18 @@
         .contacts-screen { background: #fff; padding: 40px 20px 60px; }
         .contacts-container { max-width: 450px; margin: 0 auto; text-align: center; }
         .contacts-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: 32px;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: #1a1a1a;
             margin-bottom: 15px;
         }
         .contacts-subtitle {
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 13px;
-            font-weight: 400;
+            font-weight: 300;
             letter-spacing: 1px;
             color: #777;
             margin-bottom: 20px;
@@ -742,30 +749,33 @@
         .contacts-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 35px; }
         .contact-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
         .contact-role {
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 400;
             color: #1a1a1a;
             text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 1.5px;
+            font-size: 10px;
+            letter-spacing: 2px;
         }
         .contact-line {
-            font-family: 'Lora', serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 14px;
+            font-weight: 300;
         }
         .contact-line a { color: #333; text-decoration: none; }
         .contact-line a:hover { color: #6B705C; }
         .contact-sub {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 300;
             color: #999;
             letter-spacing: 0.5px;
         }
         .contacts-divider { width: 1px; height: 40px; background: #d0d0d0; margin: 0 auto 30px; }
         .contacts-copyright {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Josefin Sans', sans-serif;
             font-size: 10px;
-            letter-spacing: 1.5px;
+            font-weight: 300;
+            letter-spacing: 2px;
             color: #aaa;
             text-transform: uppercase;
         }
