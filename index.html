@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Wedding Invitation | Julia & Od Jacobsen</title>
 
-    <!-- ПРАВИЛЬНО ПОДКЛЮЧЁННЫЕ ШРИФТЫ -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Alex+Brush&display=swap" rel="stylesheet">
+    <!-- ЛЁГКИЙ ВОЗДУШНЫЙ НАБОР: Playfair Display, Lora, Cormorant Infant, Great Vibes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+Infant:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
         /* ----- PRELOADER ----- */
@@ -16,7 +16,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #ffffff;
+            background: #fafafa;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -39,15 +39,15 @@
         #preloader .loader-fill {
             width: 0%;
             height: 100%;
-            background: #1a1a1a;
+            background: #8a8a8a;
             transition: width 0.2s linear;
         }
         #preloader .loader-percent {
-            font-family: 'Cormorant', serif;
+            font-family: 'Cormorant Infant', serif;
             font-size: 14px;
             font-weight: 300;
             letter-spacing: 4px;
-            color: #1a1a1a;
+            color: #8a8a8a;
         }
 
         /* ----- LANGUAGE SELECTOR ----- */
@@ -57,7 +57,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(250, 250, 250, 0.97);
             backdrop-filter: blur(8px);
             display: flex;
             flex-direction: column;
@@ -75,18 +75,18 @@
         }
         #langModal .lang-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: clamp(32px, 6vw, 48px);
             letter-spacing: 8px;
-            color: #1a1a1a;
+            color: #2a2a2a;
             margin-bottom: 8px;
             text-transform: uppercase;
         }
         #langModal .lang-sub {
-            font-family: 'Cormorant', serif;
+            font-family: 'Cormorant Infant', serif;
             font-size: clamp(14px, 2vw, 18px);
             font-weight: 300;
-            color: #777;
+            color: #888;
             margin-bottom: 35px;
             letter-spacing: 2px;
         }
@@ -98,31 +98,31 @@
         }
         .lang-btn {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: clamp(18px, 3vw, 24px);
             letter-spacing: 4px;
             padding: 16px 45px;
-            border: 1px solid #1a1a1a;
+            border: 1px solid #2a2a2a;
             background: transparent;
-            color: #1a1a1a;
+            color: #2a2a2a;
             cursor: pointer;
             transition: all 0.3s ease;
             text-transform: uppercase;
             min-width: 130px;
         }
         .lang-btn:hover {
-            background: #1a1a1a;
-            color: #ffffff;
+            background: #2a2a2a;
+            color: #fafafa;
         }
         .lang-btn.ru:hover {
-            background: #1a3a6a;
-            border-color: #1a3a6a;
-            color: #fff;
+            background: #4a5a7a;
+            border-color: #4a5a7a;
+            color: #fafafa;
         }
         .lang-btn.en:hover {
-            background: #6a1a2a;
-            border-color: #6a1a2a;
-            color: #fff;
+            background: #7a4a4a;
+            border-color: #7a4a4a;
+            color: #fafafa;
         }
         @media (max-width: 480px) {
             .lang-btn {
@@ -145,7 +145,8 @@
         }
         body {
             font-family: 'Lora', serif;
-            background-color: #ffffff;
+            background-color: #fafafa;
+            color: #2a2a2a;
         }
 
         /* ----- FIRST SCREEN ----- */
@@ -159,23 +160,23 @@
             justify-content: center;
             align-items: center;
             padding: 20px 16px 45px;
-            background-color: #ffffff;
+            background-color: #fafafa;
             text-align: center;
         }
         .first-screen .title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: clamp(32px, 7vw, 52px);
-            letter-spacing: 12px;
-            color: #1a1a1a;
+            letter-spacing: 14px;
+            color: #2a2a2a;
             margin-bottom: 6px;
         }
         .first-screen .date {
-            font-family: 'Cormorant', serif;
+            font-family: 'Cormorant Infant', serif;
             font-weight: 300;
             font-size: clamp(15px, 2.8vw, 20px);
-            letter-spacing: 5px;
-            color: #555;
+            letter-spacing: 6px;
+            color: #888;
             margin-bottom: 16px;
         }
         .first-screen .photo {
@@ -183,6 +184,7 @@
             margin: 0 auto 16px;
             border-radius: 14px;
             overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
         }
         .first-screen .photo img {
             width: 100%;
@@ -190,17 +192,17 @@
         }
         .first-screen .names h2 {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: clamp(28px, 5vw, 40px);
-            color: #1a1a1a;
-            letter-spacing: 6px;
+            color: #2a2a2a;
+            letter-spacing: 8px;
         }
         .first-screen .names span {
             font-family: 'Lora', serif;
-            font-weight: 400;
+            font-weight: 300;
             font-size: clamp(20px, 3.5vw, 30px);
-            color: #555;
-            letter-spacing: 4px;
+            color: #888;
+            letter-spacing: 5px;
         }
         .first-screen .scroll-down {
             position: absolute;
@@ -210,25 +212,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(0, 0, 0, 0.85);
-            color: #ffffff;
-            padding: 8px 20px;
+            background: rgba(42, 42, 42, 0.85);
+            color: #fafafa;
+            padding: 10px 24px;
             border-radius: 0px;
             font-size: clamp(0.55rem, 1vw, 0.7rem);
             text-transform: uppercase;
             cursor: pointer;
             white-space: nowrap;
             z-index: 20;
-            font-family: 'Cormorant', serif;
+            font-family: 'Cormorant Infant', serif;
             font-weight: 300;
             letter-spacing: 3px;
             backdrop-filter: blur(2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: background 0.2s ease, transform 0.2s ease;
             border: none;
         }
         .first-screen .scroll-down:hover {
-            background: #000000;
+            background: #1a1a1a;
             transform: translateX(-50%) scale(1.02);
         }
         .first-screen .arrow-icon-svg {
@@ -237,7 +239,7 @@
             height: 11px;
         }
         .first-screen .arrow-icon-svg polyline {
-            stroke: #ffffff;
+            stroke: #fafafa;
         }
 
         /* ----- АНИМАЦИИ ----- */
@@ -248,80 +250,81 @@
         }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-        .second-screen { width: 100%; background: #fff; padding: 40px 20px; }
-        .invitation-container { text-align: center; max-width: 400px; margin: 0 auto; }
+        .second-screen { width: 100%; background: #fafafa; padding: 40px 20px; }
+        .invitation-container { text-align: center; max-width: 420px; margin: 0 auto; }
 
         .invitation-container .title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            font-size: clamp(2rem, 4.5vw, 2.5rem);
+            font-weight: 300;
+            font-size: clamp(2.2rem, 5vw, 2.8rem);
             letter-spacing: 4px;
             line-height: 1.2;
-            color: #1a1a1a;
+            color: #2a2a2a;
             margin-bottom: 20px;
         }
         .save-the-date {
-            font-family: 'Alex Brush', cursive;
+            font-family: 'Great Vibes', cursive;
             font-weight: 400;
-            font-size: clamp(2rem, 4.5vw, 2.4rem);
-            color: #1a1a1a;
+            font-size: clamp(2.2rem, 5vw, 2.8rem);
+            color: #2a2a2a;
             margin-bottom: 25px;
         }
         .description-text {
             font-family: 'Lora', serif;
-            font-size: 0.85rem;
-            line-height: 1.7;
-            color: #555;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-            max-width: 320px;
+            font-weight: 300;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #777;
+            letter-spacing: 0.5px;
+            max-width: 340px;
             margin: 0 auto 35px;
         }
 
-        .line { width: 1px; background: #1a1a1a; height: 50px; margin: 0 auto; opacity: 0; transform: scaleY(0); transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1.1), transform 2.5s cubic-bezier(0.2,0.9,0.3,1.1); }
+        .line { width: 1px; background: #2a2a2a; height: 50px; margin: 0 auto; opacity: 0; transform: scaleY(0); transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1.1), transform 2.5s cubic-bezier(0.2,0.9,0.3,1.1); }
         .line-top { margin-bottom: 25px; transform-origin: top; }
         .line-bottom { margin-top: 25px; margin-bottom: 40px; transform-origin: bottom; }
-        .line.visible { opacity: 0.6; transform: scaleY(1); }
+        .line.visible { opacity: 0.4; transform: scaleY(1); }
 
         .date-block { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 5px; }
         .date-number {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.8rem, 6.5vw, 3.5rem);
-            font-weight: 500;
-            color: #1a1a1a;
+            font-size: clamp(3rem, 7vw, 4rem);
+            font-weight: 300;
+            color: #2a2a2a;
             line-height: 0.9;
             opacity: 0;
         }
         .from-left-1, .from-left-2 { transform: translateX(-100px); transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1), transform 2.5s cubic-bezier(0.2,0.9,0.3,1); }
         .from-right { transform: translateX(100px); transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1), transform 2.5s cubic-bezier(0.2,0.9,0.3,1); }
         .date-number.visible { opacity: 1; transform: translateX(0); }
-        .dot { font-size: 1.3rem; color: #1a1a1a; margin: 0; opacity: 0; transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1); }
+        .dot { font-size: 1.4rem; color: #2a2a2a; margin: 0; opacity: 0; transition: opacity 2.5s cubic-bezier(0.2,0.9,0.3,1); }
         .dot.visible { opacity: 1; }
 
-        .calendar-section { max-width: 280px; margin: 0 auto; opacity: 0; transform: translateY(80px); transition: opacity 3s cubic-bezier(0.2,0.9,0.3,1), transform 3s cubic-bezier(0.2,0.9,0.3,1); }
+        .calendar-section { max-width: 290px; margin: 0 auto; opacity: 0; transform: translateY(80px); transition: opacity 3s cubic-bezier(0.2,0.9,0.3,1), transform 3s cubic-bezier(0.2,0.9,0.3,1); }
         .calendar-section.visible { opacity: 1; transform: translateY(0); }
         .calendar-month {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             margin-bottom: 20px;
+            color: #2a2a2a;
         }
         .calendar-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 12px 6px; }
         .weekday {
-            font-family: 'Cormorant', serif;
-            font-size: 0.55rem;
+            font-family: 'Cormorant Infant', serif;
+            font-size: 0.6rem;
             font-weight: 300;
-            color: #999;
+            color: #aaa;
             text-transform: lowercase;
             letter-spacing: 1.5px;
         }
         .day {
-            font-family: 'Cormorant', serif;
-            font-size: 0.8rem;
+            font-family: 'Cormorant Infant', serif;
+            font-size: 0.85rem;
             font-weight: 300;
-            color: #1a1a1a;
+            color: #2a2a2a;
             position: relative;
             height: 28px;
             display: flex;
@@ -330,68 +333,72 @@
         }
         .empty-day { visibility: hidden; }
         .heart-svg { position: absolute; width: 48px; height: 48px; top: 50%; left: 50%; transform: translate(-50%, -52%); pointer-events: none; }
-        .heart-path { stroke: #1a1a1a; stroke-width: 1.2; fill: none; }
+        .heart-path { stroke: #2a2a2a; stroke-width: 1; fill: none; opacity: 0.5; }
 
         /* ----- LOCATION SECTION ----- */
         .location-section {
             position: relative;
-            max-width: 450px;
+            max-width: 500px;
             margin: 0 auto;
             padding: 40px 25px;
-            background: #fff;
+            background: #fafafa;
         }
         .location-card {
             position: relative;
             z-index: 2;
-            background: rgba(255, 255, 255, 0.98);
-            padding: 35px 25px 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 30px 35px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
             border-radius: 4px;
         }
-        .icon-scene { width: 70px; height: 70px; margin: 0 auto 20px; }
+        .icon-scene { width: 70px; height: 70px; margin: 0 auto 20px; opacity: 0.6; }
+        .icon-scene svg path { fill: #2a2a2a; }
         .location-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: clamp(1.6rem,4vw,2rem);
             text-transform: uppercase;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             margin-bottom: 10px;
+            color: #2a2a2a;
         }
         .save-the-place {
-            font-family: 'Alex Brush', cursive;
+            font-family: 'Great Vibes', cursive;
             font-weight: 400;
-            font-size: clamp(2rem,5vw,2.5rem);
+            font-size: clamp(2.2rem,5.5vw,2.8rem);
             margin-bottom: 20px;
+            color: #2a2a2a;
         }
         .venue-name {
-            font-family: 'Cormorant', serif;
-            font-size: 0.9rem;
+            font-family: 'Cormorant Infant', serif;
+            font-size: 1rem;
             font-weight: 400;
             line-height: 1.5;
-            max-width: 280px;
+            max-width: 300px;
             margin: 0 auto 10px;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #1a1a1a;
+            letter-spacing: 4px;
+            color: #2a2a2a;
         }
         .venue-address {
             font-family: 'Lora', serif;
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: #555;
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: #888;
             margin-bottom: 15px;
         }
 
         .location-slider {
             position: relative;
             width: 100%;
-            max-width: 380px;
+            max-width: 400px;
             margin: 0 auto 20px;
             border-radius: 8px;
             overflow: hidden;
             aspect-ratio: 4 / 3;
             background: #f0f0f0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
         .location-slider .slide {
             position: absolute;
@@ -431,80 +438,85 @@
             transition: opacity 0.2s;
             font-family: 'Playfair Display', serif;
             font-size: 32px;
-            font-weight: 500;
-            color: #1a1a1a;
+            font-weight: 300;
+            color: #2a2a2a;
             line-height: 1;
+            opacity: 0.5;
         }
         .slider-controls button:hover {
-            opacity: 0.5;
+            opacity: 0.8;
         }
 
         .location-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px; }
         .btn-maps {
             display: inline-block;
-            background: #1a1a1a;
-            color: #fff;
+            background: #2a2a2a;
+            color: #fafafa;
             text-decoration: none;
-            font-family: 'Cormorant', serif;
-            font-size: 0.55rem;
+            font-family: 'Cormorant Infant', serif;
+            font-size: 0.6rem;
             font-weight: 400;
-            letter-spacing: 2.5px;
-            padding: 10px 20px;
+            letter-spacing: 3px;
+            padding: 12px 28px;
             text-transform: uppercase;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: background 0.2s, opacity 0.2s;
             border: none;
+            opacity: 0.85;
         }
-        .btn-maps:hover { background: #333; }
+        .btn-maps:hover { background: #1a1a1a; opacity: 1; }
 
         /* ----- TIMELINE ----- */
-        .timeline-screen { background: #fff; padding: 40px 20px 50px; }
-        .timeline-container { max-width: 400px; margin: 0 auto; text-align: center; }
+        .timeline-screen { background: #fafafa; padding: 40px 20px 50px; }
+        .timeline-container { max-width: 420px; margin: 0 auto; text-align: center; }
         .timeline-main-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            font-size: clamp(1.8rem,4.5vw,2.2rem);
+            font-weight: 300;
+            font-size: clamp(2rem,4.8vw,2.5rem);
             text-transform: uppercase;
-            letter-spacing: 8px;
+            letter-spacing: 10px;
+            color: #2a2a2a;
         }
         .timeline-subtitle {
-            font-family: 'Alex Brush', cursive;
+            font-family: 'Great Vibes', cursive;
             font-weight: 400;
-            font-size: clamp(1.3rem,3.5vw,1.6rem);
+            font-size: clamp(1.6rem,4vw,2rem);
             margin-bottom: 25px;
+            color: #2a2a2a;
         }
-        .timeline-middle-line { width: 1px; background: #b5b5b5; margin: 0 auto 30px; height: 40px; }
+        .timeline-middle-line { width: 1px; background: #ccc; margin: 0 auto 30px; height: 40px; }
         .timeline-list { margin: 30px 0; }
-        .timeline-item { margin: 25px 0; opacity: 0; transform: translateX(-50px); transition: opacity 1.8s cubic-bezier(0.25,0.9,0.3,1), transform 1.8s cubic-bezier(0.25,0.9,0.3,1); }
+        .timeline-item { margin: 28px 0; opacity: 0; transform: translateX(-50px); transition: opacity 1.8s cubic-bezier(0.25,0.9,0.3,1), transform 1.8s cubic-bezier(0.25,0.9,0.3,1); }
         .timeline-item.slide-right { transform: translateX(50px); }
         .timeline-item.visible { opacity: 1; transform: translateX(0); }
         .timeline-item .time {
             font-family: 'Playfair Display', serif;
-            font-size: 30px;
-            font-weight: 500;
-            letter-spacing: 3px;
+            font-size: 34px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: #2a2a2a;
         }
         .timeline-item .timeline-desc {
             font-family: 'Lora', serif;
+            font-weight: 300;
             font-size: 14px;
-            color: #333;
-            max-width: 300px;
+            color: #777;
+            max-width: 320px;
             margin: 0 auto;
-            font-weight: 400;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* ----- DRESS CODE ----- */
-        .dresscode-screen { background: #fff; padding: 40px 16px 50px; }
-        .dresscode-container { width: 100%; max-width: 450px; margin: 0 auto; text-align: center; }
+        .dresscode-screen { background: #fafafa; padding: 40px 16px 50px; }
+        .dresscode-container { width: 100%; max-width: 480px; margin: 0 auto; text-align: center; }
         .dresscode-main-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: 40px;
             text-transform: uppercase;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             line-height: 1.2;
-            color: #121212;
+            color: #2a2a2a;
             margin-bottom: 24px;
             opacity: 0;
             transform: translateY(50px);
@@ -512,11 +524,11 @@
         }
         .dresscode-description {
             font-family: 'Lora', serif;
+            font-weight: 300;
             font-size: 13px;
-            font-weight: 400;
-            line-height: 1.8;
-            color: #555555;
-            max-width: 400px;
+            line-height: 1.9;
+            color: #777;
+            max-width: 420px;
             margin: 0 auto 30px auto;
             opacity: 0;
             transform: translateY(50px);
@@ -525,50 +537,51 @@
         .dresscode-main-title.visible, .dresscode-description.visible { opacity: 1; transform: translate(0); }
 
         /* ----- COUNTDOWN ----- */
-        .countdown-screen { background: #000000; padding: 60px 16px 70px; }
-        .countdown-dark-block { max-width: 450px; margin: 0 auto; text-align: center; }
+        .countdown-screen { background: #2a2a2a; padding: 60px 16px 70px; }
+        .countdown-dark-block { max-width: 480px; margin: 0 auto; text-align: center; }
         .countdown-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: 36px;
             text-transform: uppercase;
-            letter-spacing: 6px;
-            color: #fff;
-            max-width: 340px;
+            letter-spacing: 8px;
+            color: #fafafa;
+            max-width: 360px;
             margin: 0 auto 12px;
         }
         .countdown-subtitle {
-            font-family: 'Alex Brush', cursive;
+            font-family: 'Great Vibes', cursive;
             font-weight: 400;
             font-size: 34px;
-            color: #fff;
+            color: #fafafa;
             margin-bottom: 40px;
+            opacity: 0.9;
         }
-        .countdown-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.25); margin: 0 auto 45px; }
-        .timer-grid { display: flex; justify-content: center; max-width: 360px; margin: 0 auto; }
+        .countdown-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.15); margin: 0 auto 45px; }
+        .timer-grid { display: flex; justify-content: center; max-width: 380px; margin: 0 auto; }
         .timer-item { flex: 1; text-align: center; }
         .timer-number {
             font-family: 'Playfair Display', serif;
-            font-size: 44px;
-            font-weight: 500;
-            color: #fff;
+            font-size: 48px;
+            font-weight: 300;
+            color: #fafafa;
             margin-bottom: 14px;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
         }
         .timer-label {
-            font-family: 'Cormorant', serif;
-            font-size: 9px;
+            font-family: 'Cormorant Infant', serif;
+            font-size: 10px;
             font-weight: 300;
-            color: rgba(255,255,255,0.4);
-            letter-spacing: 2.5px;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
         .countdown-animate { opacity: 0; transform: translateY(70px); transition: opacity 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1); }
         .countdown-animate.visible { opacity: 1; transform: translateY(0); }
 
         /* ----- CONCEPT ----- */
-        .wishes-screen { background: #ffffff; padding: 50px 20px 70px; }
-        .wishes-container { max-width: 650px; margin: 0 auto; text-align: center; }
+        .wishes-screen { background: #fafafa; padding: 50px 20px 70px; }
+        .wishes-container { max-width: 680px; margin: 0 auto; text-align: center; }
         .anim-slide-up, .anim-fade-in, .anim-slide-left, .anim-slide-right { opacity: 0; transition: opacity 2.5s cubic-bezier(0.25, 0.8, 0.4, 1), transform 2.5s cubic-bezier(0.25, 0.8, 0.4, 1); }
         .anim-slide-up { transform: translateY(50px); }
         .anim-slide-left { transform: translateX(-50px); }
@@ -577,86 +590,88 @@
         .anim-slide-up.visible, .anim-fade-in.visible, .anim-slide-left.visible, .anim-slide-right.visible { opacity: 1; transform: translate(0) !important; }
         .wishes-main-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: 40px;
             text-transform: uppercase;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             margin-bottom: 10px;
+            color: #2a2a2a;
         }
         .concept-text-block {
             font-family: 'Lora', serif;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 1.9;
-            color: #555555;
-            max-width: 580px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 2;
+            color: #777;
+            max-width: 600px;
             margin: 0 auto 30px auto;
             text-align: center;
             padding: 0 10px;
         }
         .concept-text-block p { margin-bottom: 18px; }
         .concept-text-block p:last-child { margin-bottom: 0; }
-        .wishes-vertical-divider { width: 1px; height: 70px; background-color: #b5b5b5; margin: 0 auto 35px auto; }
+        .wishes-vertical-divider { width: 1px; height: 70px; background-color: #ddd; margin: 0 auto 35px auto; }
         .pre-closing {
             font-family: 'Lora', serif;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 1.6;
-            color: #121212;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #2a2a2a;
             margin-bottom: 35px;
         }
         .wishes-names-block { display: flex; flex-direction: column; align-items: center; margin-bottom: 45px; }
         .name-item {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            font-size: 44px;
+            font-weight: 300;
+            font-size: 48px;
             text-transform: uppercase;
-            letter-spacing: 8px;
+            letter-spacing: 10px;
             line-height: 1.1;
-            color: #121212;
+            color: #2a2a2a;
         }
         .ampersand-item {
-            font-family: 'Alex Brush', cursive;
+            font-family: 'Great Vibes', cursive;
             font-weight: 400;
-            font-size: 40px;
-            color: #121212;
+            font-size: 44px;
+            color: #2a2a2a;
             margin: 6px 0;
+            opacity: 0.8;
         }
 
         /* ----- RSVP ----- */
-        .rsvp-screen { background: #fff; padding: 40px 20px 60px; }
-        .rsvp-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px 30px; text-align: left; }
+        .rsvp-screen { background: #fafafa; padding: 40px 20px 60px; }
+        .rsvp-container { max-width: 620px; margin: 0 auto; background: rgba(255,255,255,0.9); padding: 35px 35px; text-align: left; border-radius: 4px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
         .rsvp-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            font-size: 30px;
+            font-weight: 300;
+            font-size: 34px;
             text-transform: uppercase;
-            letter-spacing: 6px;
-            color: #1a1a1a;
+            letter-spacing: 8px;
+            color: #2a2a2a;
             text-align: center;
             margin-bottom: 20px;
         }
         .rsvp-deadline {
             font-family: 'Lora', serif;
-            font-size: 12px;
-            font-weight: 400;
-            color: #777;
+            font-weight: 300;
+            font-size: 13px;
+            color: #888;
             text-align: center;
             margin-bottom: 30px;
             font-style: italic;
         }
-        .rsvp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 30px; align-items: start; }
+        .rsvp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px 35px; align-items: start; }
         .rsvp-grid .full-width { grid-column: 1 / -1; }
         .form-group { margin-bottom: 0; }
         .form-group label {
             display: block;
-            font-family: 'Cormorant', serif;
-            font-size: 9px;
-            font-weight: 500;
+            font-family: 'Cormorant Infant', serif;
+            font-size: 10px;
+            font-weight: 400;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
             margin-bottom: 6px;
-            color: #1a1a1a;
+            color: #2a2a2a;
         }
         .form-group input, .form-group select {
             width: 100%;
@@ -664,26 +679,27 @@
             border: none;
             border-bottom: 1px solid #ddd;
             font-family: 'Lora', serif;
-            font-size: 15px;
-            font-weight: 400;
+            font-size: 16px;
+            font-weight: 300;
             background: transparent;
             outline: none;
-            color: #1a1a1a;
+            color: #2a2a2a;
         }
-        .form-group input:focus, .form-group select:focus { border-bottom-color: #1a1a1a; }
+        .form-group input:focus, .form-group select:focus { border-bottom-color: #2a2a2a; }
         .radio-group-horizontal { display: flex; gap: 20px; margin-top: 4px; flex-wrap: wrap; }
         .radio-group-horizontal label {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-weight: 400;
+            font-weight: 300;
             text-transform: none;
-            font-size: 14px;
+            font-size: 15px;
             margin-bottom: 0;
             cursor: pointer;
             font-family: 'Lora', serif;
+            color: #2a2a2a;
         }
-        .radio-group-horizontal input { width: auto; accent-color: #1a1a1a; }
+        .radio-group-horizontal input { width: auto; accent-color: #2a2a2a; }
         .other-song-input { margin-top: 6px; display: block; }
         .other-song-input input {
             width: 100%;
@@ -691,39 +707,41 @@
             border: none;
             border-bottom: 1px solid #ddd;
             font-family: 'Lora', serif;
-            font-size: 14px;
-            font-weight: 400;
+            font-size: 15px;
+            font-weight: 300;
             background: transparent;
             outline: none;
-            color: #1a1a1a;
+            color: #2a2a2a;
         }
-        .other-song-input input:focus { border-bottom-color: #1a1a1a; }
+        .other-song-input input:focus { border-bottom-color: #2a2a2a; }
         .submit-btn {
             display: block;
             width: 100%;
-            background: #1a1a1a;
-            color: white;
+            background: #2a2a2a;
+            color: #fafafa;
             border: none;
-            padding: 14px;
-            font-family: 'Cormorant', serif;
-            font-size: 10px;
-            font-weight: 500;
+            padding: 16px;
+            font-family: 'Cormorant Infant', serif;
+            font-size: 11px;
+            font-weight: 400;
             letter-spacing: 3px;
             text-transform: uppercase;
             cursor: pointer;
             margin-top: 30px;
+            transition: background 0.2s;
+            opacity: 0.85;
         }
-        .submit-btn:hover { background: #333; }
+        .submit-btn:hover { background: #1a1a1a; opacity: 1; }
         .success-message {
             text-align: center;
             margin-top: 20px;
             padding: 16px 20px;
-            background: #e8f5e9;
-            border-left: 3px solid #2e7d32;
-            color: #1e5a22;
+            background: #eef5ee;
+            border-left: 3px solid #5a7a5a;
+            color: #3a5a3a;
             font-family: 'Lora', serif;
-            font-size: 13px;
-            font-weight: 400;
+            font-size: 14px;
+            font-weight: 300;
             border-radius: 4px;
             display: none;
         }
@@ -731,64 +749,65 @@
         @media (max-width: 600px) { .rsvp-grid { grid-template-columns: 1fr; gap: 20px; } .rsvp-container { padding: 30px 20px; } }
 
         /* ----- CONTACTS ----- */
-        .contacts-screen { background: #fff; padding: 40px 20px 60px; }
-        .contacts-container { max-width: 450px; margin: 0 auto; text-align: center; }
+        .contacts-screen { background: #fafafa; padding: 40px 20px 60px; }
+        .contacts-container { max-width: 480px; margin: 0 auto; text-align: center; }
         .contacts-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            font-size: 30px;
+            font-weight: 300;
+            font-size: 34px;
             text-transform: uppercase;
-            letter-spacing: 6px;
-            color: #1a1a1a;
+            letter-spacing: 8px;
+            color: #2a2a2a;
             margin-bottom: 15px;
         }
         .contacts-subtitle {
             font-family: 'Lora', serif;
-            font-size: 13px;
-            font-weight: 400;
+            font-weight: 300;
+            font-size: 14px;
             letter-spacing: 2px;
-            color: #777;
+            color: #888;
             margin-bottom: 20px;
         }
         .contacts-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 35px; }
         .contact-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
         .contact-role {
-            font-family: 'Cormorant', serif;
-            font-weight: 500;
-            color: #1a1a1a;
+            font-family: 'Cormorant Infant', serif;
+            font-weight: 400;
+            color: #2a2a2a;
             text-transform: uppercase;
-            font-size: 10px;
-            letter-spacing: 2.5px;
+            font-size: 11px;
+            letter-spacing: 3px;
         }
         .contact-line {
             font-family: 'Lora', serif;
-            font-size: 14px;
-            font-weight: 400;
-        }
-        .contact-line a { color: #333; text-decoration: none; }
-        .contact-line a:hover { color: #6B705C; }
-        .contact-sub {
-            font-family: 'Cormorant', serif;
-            font-size: 10px;
+            font-size: 15px;
             font-weight: 300;
-            color: #999;
+            color: #2a2a2a;
+        }
+        .contact-line a { color: #2a2a2a; text-decoration: none; }
+        .contact-line a:hover { color: #8a8a8a; }
+        .contact-sub {
+            font-family: 'Cormorant Infant', serif;
+            font-size: 11px;
+            font-weight: 300;
+            color: #aaa;
             letter-spacing: 1px;
         }
-        .contacts-divider { width: 1px; height: 40px; background: #d0d0d0; margin: 0 auto 30px; }
+        .contacts-divider { width: 1px; height: 40px; background: #ddd; margin: 0 auto 30px; }
         .contacts-copyright {
-            font-family: 'Cormorant', serif;
-            font-size: 9px;
+            font-family: 'Cormorant Infant', serif;
+            font-size: 10px;
             font-weight: 300;
-            letter-spacing: 2.5px;
-            color: #aaa;
+            letter-spacing: 3px;
+            color: #bbb;
             text-transform: uppercase;
         }
 
         .rsvp-animate, .contacts-animate { opacity: 0; transform: translateY(50px); transition: opacity 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 2.5s cubic-bezier(0.2, 0.9, 0.3, 1.1); }
         .rsvp-animate.visible, .contacts-animate.visible { opacity: 1; transform: translateY(0); }
 
-        @media (max-width: 580px) { .name-item { font-size: 36px; letter-spacing: 4px; } }
-        @media (max-width: 480px) { .name-item { font-size: 30px; letter-spacing: 3px; } .radio-group-horizontal { flex-direction: column; gap: 10px; } }
+        @media (max-width: 580px) { .name-item { font-size: 38px; letter-spacing: 4px; } }
+        @media (max-width: 480px) { .name-item { font-size: 32px; letter-spacing: 3px; } .radio-group-horizontal { flex-direction: column; gap: 10px; } }
     </style>
 </head>
 <body>
@@ -858,7 +877,7 @@
 <!-- LOCATION SECTION -->
 <div class="location-section fade-up" id="locationSection">
     <div class="location-card">
-        <div class="icon-scene"><svg viewBox="0 0 24 24" width="50" height="50"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#1a1a1a"/></svg></div>
+        <div class="icon-scene"><svg viewBox="0 0 24 24" width="50" height="50"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#2a2a2a" opacity="0.6"/></svg></div>
         <h2 class="location-title" data-en="VENUE" data-ru="МЕСТО">VENUE</h2>
         <div class="save-the-place" data-en="Save the place!" data-ru="Save the place!">Save the place!</div>
         <p class="venue-name">SAVASAVA Restaurant</p>
