@@ -611,6 +611,38 @@
         .concept-text-block p { margin-bottom: 18px; }
         .concept-text-block p:last-child { margin-bottom: 0; }
         .wishes-vertical-divider { width: 1px; height: 70px; background-color: #ddd; margin: 0 auto 35px auto; }
+
+        /* СТИЛИ ДЛЯ ФОТО МЕЖДУ БЛОКАМИ */
+        .section-photo {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .section-photo img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+            display: block;
+            margin: 0 auto;
+        }
+        .photo-divider {
+            width: 100%;
+            padding: 30px 0;
+            background: #fafafa;
+        }
+        .photo-divider img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+            display: block;
+            margin: 0 auto;
+        }
+
         .pre-closing {
             font-family: 'Lora', serif;
             font-weight: 300;
@@ -636,6 +668,20 @@
             color: #2a2a2a;
             margin: 6px 0;
             opacity: 0.8;
+        }
+
+        /* ФОТО ПЕРЕД ИМЕНАМИ В КОНЦЕПЦИИ */
+        .names-photo {
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+        }
+        .names-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* ----- RSVP ----- */
@@ -955,11 +1001,24 @@
         </div>
         <div class="wishes-vertical-divider anim-fade-in"></div>
         <div class="pre-closing anim-slide-up" data-en="See you soon!<br>With love" data-ru="До скорой встречи!<br>С любовью">See you soon!<br>With love</div>
+
+        <!-- ФОТО ПЕРЕД ИМЕНАМИ -->
+        <div class="names-photo anim-slide-up">
+            <img src="IMG_7873.png" alt="Julia & Od" onerror="this.style.display='none'">
+        </div>
+
         <div class="wishes-names-block">
             <span class="name-item anim-slide-left" id="juliaWishes">Julia</span>
             <span class="ampersand-item anim-slide-left">&</span>
             <span class="name-item anim-slide-right" id="odWishes">Od</span>
         </div>
+    </div>
+</div>
+
+<!-- ФОТО МЕЖДУ RSVP И КОНТАКТАМИ -->
+<div class="photo-divider">
+    <div class="section-photo">
+        <img src="IMG_7873.png" alt="Julia & Od" onerror="this.style.display='none'">
     </div>
 </div>
 
