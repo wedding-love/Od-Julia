@@ -580,7 +580,7 @@
         .countdown-animate.visible { opacity: 1; transform: translateY(0); }
 
         /* ----- CONCEPT ----- */
-        .wishes-screen { background: #fafafa; padding: 50px 20px 70px; }
+        .wishes-screen { background: #fafafa; padding: 40px 20px 40px; }
         .wishes-container { max-width: 680px; margin: 0 auto; text-align: center; }
         .anim-slide-up, .anim-fade-in, .anim-slide-left, .anim-slide-right { opacity: 0; transition: opacity 2.5s cubic-bezier(0.25, 0.8, 0.4, 1), transform 2.5s cubic-bezier(0.25, 0.8, 0.4, 1); }
         .anim-slide-up { transform: translateY(50px); }
@@ -604,22 +604,43 @@
             line-height: 2;
             color: #777;
             max-width: 600px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 25px auto;
             text-align: center;
             padding: 0 10px;
         }
         .concept-text-block p { margin-bottom: 18px; }
         .concept-text-block p:last-child { margin-bottom: 0; }
-        .wishes-vertical-divider { width: 1px; height: 70px; background-color: #ddd; margin: 0 auto 35px auto; }
+        .wishes-vertical-divider { width: 1px; height: 40px; background-color: #ddd; margin: 0 auto 20px auto; }
         .pre-closing {
             font-family: 'Lora', serif;
             font-weight: 300;
             font-size: 14px;
             line-height: 1.8;
             color: #2a2a2a;
-            margin-bottom: 35px;
+            margin-bottom: 10px;
         }
-        .wishes-names-block { display: flex; flex-direction: column; align-items: center; margin-bottom: 45px; }
+
+        /* ФОТО ПЕРЕД ИМЕНАМИ — МИНИМАЛЬНЫЕ ОТСТУПЫ */
+        .names-photo {
+            max-width: 400px;
+            margin: 0 auto 5px auto;
+            text-align: center;
+        }
+        .names-photo img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .wishes-names-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
         .name-item {
             font-family: 'Playfair Display', serif;
             font-weight: 300;
@@ -634,14 +655,14 @@
             font-weight: 400;
             font-size: 44px;
             color: #2a2a2a;
-            margin: 6px 0;
+            margin: 2px 0;
             opacity: 0.8;
         }
 
-        /* ФОТО ПЕРЕД RSVP — УМЕНЬШЕННОЕ, БЕЗ РАМКИ */
+        /* ФОТО ПЕРЕД RSVP — МИНИМАЛЬНЫЕ ОТСТУПЫ */
         .rsvp-photo {
             max-width: 400px;
-            margin: 0 auto 20px auto;
+            margin: 0 auto 5px auto;
             text-align: center;
         }
         .rsvp-photo img {
@@ -653,7 +674,7 @@
         }
 
         /* ----- RSVP ----- */
-        .rsvp-screen { background: #fafafa; padding: 40px 20px 60px; }
+        .rsvp-screen { background: #fafafa; padding: 20px 20px 50px; }
         .rsvp-container { max-width: 620px; margin: 0 auto; background: rgba(255,255,255,0.9); padding: 35px 35px; text-align: left; border-radius: 4px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
         .rsvp-title {
             font-family: 'Playfair Display', serif;
@@ -969,6 +990,12 @@
         </div>
         <div class="wishes-vertical-divider anim-fade-in"></div>
         <div class="pre-closing anim-slide-up" data-en="See you soon!<br>With love" data-ru="До скорой встречи!<br>С любовью">See you soon!<br>With love</div>
+
+        <!-- ФОТО ПОСЛЕ ИМЁН Julia & Od — МИНИМАЛЬНЫЙ ОТСТУП -->
+        <div class="names-photo anim-slide-up">
+            <img src="IMG_7873.png" alt="Julia & Od" onerror="this.style.display='none'">
+        </div>
+
         <div class="wishes-names-block">
             <span class="name-item anim-slide-left" id="juliaWishes">Julia</span>
             <span class="ampersand-item anim-slide-left">&</span>
@@ -977,7 +1004,7 @@
     </div>
 </div>
 
-<!-- ФОТО ПЕРЕД RSVP — УМЕНЬШЕННОЕ, БЕЗ РАМКИ -->
+<!-- ФОТО ПЕРЕД RSVP — МИНИМАЛЬНЫЙ ОТСТУП -->
 <div class="rsvp-photo">
     <img src="IMG_7873.png" alt="Julia & Od" onerror="this.style.display='none'">
 </div>
